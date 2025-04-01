@@ -5,11 +5,6 @@ import yaml
 import os
 import re
 
-# Carica XML
-tree = ET.parse("HMI_2500053_PTREL_DRH_v06.Device.App_User.xml")
-root = tree.getroot()
-ns = {'ns': 'http://www.3s-software.com/schemas/Symbolconfiguration.xsd'}
-
 def scegli_file():
     root = tk.Tk()
     root.withdraw()
