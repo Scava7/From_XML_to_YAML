@@ -52,11 +52,6 @@ def build_structure(type_name, visited=None):
     return result
 
 
-# Estrai il nodo App_User
-app_user_node = root.find(".//ns:Node[@name='App_User']", ns)
-
-import re
-
 def clean_type_name(type_name):
     if type_name.startswith("T_ARRAY__"):
         # Rimuove "T_ARRAY__" e sostituisce i doppi underscore con sintassi leggibile
@@ -90,10 +85,21 @@ def parse_nodes(xml_node):
 
     return result
 
+# Trova il primo nodo che contiene un figlio chiamato IO
+program_root = None
+for node in root.findall(".//ns:Node", ns):
+    for child in node.findall("ns:Node", ns):
+        if child.get("name") == "IO":
+            program_root = child
+            break
+    if program_root:
+        break
 
+if program_root is None:
+    raise ValueError("ERR Nessun nodo 'IO' trovato nel file XML.")
 
-# Costruisco l'albero partendo da App_User
-output_tree = parse_nodes(app_user_node)
+output_tree = parse_nodes(program_root)
+output_tree = {"IO": parse_nodes(program_root)}
 
 # Esporta YAML
 output_filename = "IO_Struct.yaml"
