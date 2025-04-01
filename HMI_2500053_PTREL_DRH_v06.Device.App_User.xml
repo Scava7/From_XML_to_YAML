@@ -1,0 +1,967 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Symbolconfiguration xmlns="http://www.3s-software.com/schemas/Symbolconfiguration.xsd">
+  <Header>
+    <Version>3.5.14.0</Version>
+    <SymbolConfigObject version="3.5.16.30" runtimeid="3.5.16.50" libversion="3.5.16.0" compiler="3.5.16.50" lmm="3.5.16.0" profile="CODESYS V3.5 SP16 Patch 5+" settings="SupportOPCUA, XmlIncludeComments, LayoutCalculator=OptimizedClientSideLayoutCalculator" />
+    <ProjectInfo name="HMI_2500053_PTREL_DRH_v06" devicename="Device" appname="App_User" />
+  </Header>
+  <TypeList>
+    <TypeUserDef name="T_Almec4_0_Hmi" size="0" nativesize="0" typeclass="Userdef" pouclass="STRUCTURE" iecname="Almec4_0_Hmi" />
+    <TypeUserDef name="T_Almec4_0_Vis" size="0" nativesize="0" typeclass="Userdef" pouclass="STRUCTURE" iecname="Almec4_0_Vis" />
+    <TypeUserDef name="T_Batteries_Cfg" size="0" nativesize="0" typeclass="Userdef" pouclass="STRUCTURE" iecname="Batteries_Cfg" />
+    <TypeUserDef name="T_Event_Out" size="0" nativesize="0" typeclass="Userdef" pouclass="STRUCTURE" iecname="Event_Out" />
+    <TypeUserDef name="T_Hull_Cfg" size="0" nativesize="0" typeclass="Userdef" pouclass="STRUCTURE" iecname="Hull_Cfg" />
+    <TypeUserDef name="T_Jetring_Cfg" size="0" nativesize="0" typeclass="Userdef" pouclass="STRUCTURE" iecname="Jetring_Cfg" />
+    <TypeUserDef name="T_MachineMode_Vis" size="0" nativesize="0" typeclass="Userdef" pouclass="STRUCTURE" iecname="MachineMode_Vis" />
+    <TypeUserDef name="T_PowerManagement_Main" size="0" nativesize="0" typeclass="Userdef" pouclass="STRUCTURE" iecname="PowerManagement_Main" />
+    <TypeUserDef name="T_Signal_Lamp_Out" size="0" nativesize="0" typeclass="Userdef" pouclass="STRUCTURE" iecname="Signal_Lamp_Out" />
+    <TypeUserDef name="T_Signal_Lamp_Sts" size="0" nativesize="0" typeclass="Userdef" pouclass="STRUCTURE" iecname="Signal_Lamp_Sts" />
+    <TypeUserDef name="T_Statistics_Cfg" size="0" nativesize="0" typeclass="Userdef" pouclass="STRUCTURE" iecname="Statistics_Cfg" />
+    <TypeUserDef name="T_Winches_Sts" size="0" nativesize="0" typeclass="Userdef" pouclass="STRUCTURE" iecname="Winches_Sts" />
+    <TypeSimple name="T_BOOL" size="1" swapsize="0" typeclass="Bool" iecname="BOOL" />
+    <TypeSimple name="T_BYTE" size="1" swapsize="1" typeclass="Byte" iecname="BYTE" />
+    <TypeSimple name="T_DINT" size="4" swapsize="4" typeclass="DInt" iecname="DINT" />
+    <TypeSimple name="T_INT" size="2" swapsize="2" typeclass="Int" iecname="INT" />
+    <TypeSimple name="T_REAL" size="4" swapsize="4" typeclass="Real" iecname="REAL" />
+    <TypeSimple name="T_SINT" size="1" swapsize="1" typeclass="SInt" iecname="SINT" />
+    <TypeSimple name="T_STRING" size="81" swapsize="0" typeclass="String" iecname="STRING" />
+    <TypeSimple name="T_UDINT" size="4" swapsize="4" typeclass="UDInt" iecname="UDINT" />
+    <TypeSimple name="T_UINT" size="2" swapsize="2" typeclass="UInt" iecname="UINT" />
+    <TypeSimple name="T_USINT" size="1" swapsize="1" typeclass="USInt" iecname="USINT" />
+    <TypeArray name="T_ARRAY__0__150__OF_BOOL" size="151" nativesize="151" typeclass="Array" iecname="ARRAY [0..150] OF BOOL" basetype="T_BOOL">
+      <ArrayDim minrange="0" maxrange="150" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__1__OF_BYTE" size="2" nativesize="2" typeclass="Array" iecname="ARRAY [0..1] OF BYTE" basetype="T_BYTE">
+      <ArrayDim minrange="0" maxrange="1" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__2__OF_INT" size="6" nativesize="6" typeclass="Array" iecname="ARRAY [0..2] OF INT" basetype="T_INT">
+      <ArrayDim minrange="0" maxrange="2" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__31__OF_BOOL" size="32" nativesize="32" typeclass="Array" iecname="ARRAY [0..31] OF BOOL" basetype="T_BOOL">
+      <ArrayDim minrange="0" maxrange="31" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__3__OF_UINT" size="8" nativesize="8" typeclass="Array" iecname="ARRAY [0..3] OF UINT" basetype="T_UINT">
+      <ArrayDim minrange="0" maxrange="3" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__7__OF_BYTE" size="8" nativesize="8" typeclass="Array" iecname="ARRAY [0..7] OF BYTE" basetype="T_BYTE">
+      <ArrayDim minrange="0" maxrange="7" />
+    </TypeArray>
+    <TypeUserDef name="T_Air_Conditioning_Cfg" size="1" nativesize="1" typeclass="Userdef" pouclass="STRUCTURE" iecname="Air_Conditioning_Cfg">
+      <UserDefElement iecname="Present" type="T_BOOL" byteoffset="0" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Air_Conditioning_Sts" size="1" nativesize="1" typeclass="Userdef" pouclass="STRUCTURE" iecname="Air_Conditioning_Sts">
+      <UserDefElement iecname="Pressure_Alarm" type="T_BOOL" byteoffset="0" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Almec4_0_Cfg" size="1" nativesize="1" typeclass="Userdef" pouclass="STRUCTURE" iecname="Almec4_0_Cfg">
+      <UserDefElement iecname="x_modemIndustry40enable" type="T_BOOL" byteoffset="0" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Almec4_0_Cmd" size="8" nativesize="8" typeclass="Userdef" pouclass="STRUCTURE" iecname="Almec4_0_Cmd">
+      <UserDefElement iecname="Job_Num_Requested" type="T_UINT" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Job_Work_Hours_Requested" type="T_UINT" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="Job_Engine_Speed_Requested" type="T_UINT" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="Job_Oil_Flow_Requested" type="T_UINT" byteoffset="6" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Almec4_0_Sts" size="2" nativesize="2" typeclass="Userdef" pouclass="STRUCTURE" iecname="Almec4_0_Sts">
+      <UserDefElement iecname="Job_Work_Hours_Elapsed" type="T_UINT" byteoffset="0" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Analog_Sensor_Cfg" size="10" nativesize="10" typeclass="Userdef" pouclass="STRUCTURE" iecname="Analog_Sensor_Cfg">
+      <UserDefElement iecname="Sensor_Present" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Min_Raw_Value" type="T_INT" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="Max_Raw_Value" type="T_INT" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="Min_Scaled_Value" type="T_INT" byteoffset="6" vartype="VAR" />
+      <UserDefElement iecname="Max_Scaled_Value" type="T_INT" byteoffset="8" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Analog_Sensor_Struct_Real" size="7" nativesize="8" typeclass="Userdef" pouclass="STRUCTURE" iecname="Analog_Sensor_Struct_Real">
+      <UserDefElement iecname="rValue" type="T_REAL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="iValue_x10" type="T_INT" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="xError_Sensor" type="T_BOOL" byteoffset="6" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Batteries_Sts" size="6" nativesize="8" typeclass="Userdef" pouclass="STRUCTURE" iecname="Batteries_Sts">
+      <UserDefElement iecname="rVoltage_From_Batteries" type="T_REAL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="iVoltage_From_Batteries" type="T_INT" byteoffset="4" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Batteries_Vis" size="81" nativesize="81" typeclass="Userdef" pouclass="STRUCTURE" iecname="Batteries_Vis">
+      <UserDefElement iecname="Icon" type="T_STRING" byteoffset="0" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Booster_Cfg" size="2" nativesize="2" typeclass="Userdef" pouclass="STRUCTURE" iecname="Booster_Cfg">
+      <UserDefElement iecname="Booster_Pump_Present" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Booster_Exel_Present" type="T_BOOL" byteoffset="1" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Booster_Vis" size="3" nativesize="3" typeclass="Userdef" pouclass="STRUCTURE" iecname="Booster_Vis">
+      <UserDefElement iecname="At_Least_One_Booster_Present" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Booster_Pressure_Pump" type="T_BOOL" byteoffset="1" vartype="VAR" />
+      <UserDefElement iecname="Booster_Pressure_Excavators" type="T_BOOL" byteoffset="2" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_CAN_Cfg" size="7" nativesize="7" typeclass="Userdef" pouclass="STRUCTURE" iecname="CAN_Cfg">
+      <UserDefElement iecname="_05_CR2016_CommandPlank_Present" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="_06_CR2016_OC_Present" type="T_BOOL" byteoffset="1" vartype="VAR" />
+      <UserDefElement iecname="_15_CR2050_Hydr_Present" type="T_BOOL" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="_20_CR2012_MC_Present" type="T_BOOL" byteoffset="3" vartype="VAR" />
+      <UserDefElement iecname="Hull_Inclinometer_Present" type="T_BOOL" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="Propeller_Encoder_Present" type="T_BOOL" byteoffset="5" vartype="VAR" />
+      <UserDefElement iecname="Propeller_Joystick_Present" type="T_BOOL" byteoffset="6" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_CAN_Status_Channels" size="12" nativesize="12" typeclass="Userdef" pouclass="STRUCTURE" iecname="CAN_Status_Channels">
+      <UserDefElement iecname="DiagInfo" type="T_INT" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="iErrorCntRx" type="T_INT" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="iErrorCntTx" type="T_INT" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="xActive" type="T_BOOL" byteoffset="6" vartype="VAR" />
+      <UserDefElement iecname="xError" type="T_BOOL" byteoffset="7" vartype="VAR" />
+      <UserDefElement iecname="xWarningRx" type="T_BOOL" byteoffset="8" vartype="VAR" />
+      <UserDefElement iecname="xWarningTx" type="T_BOOL" byteoffset="9" vartype="VAR" />
+      <UserDefElement iecname="iBusLoad" type="T_INT" byteoffset="10" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_CAN_Sts_DeviceStatus" size="9" nativesize="9" typeclass="Userdef" pouclass="STRUCTURE" iecname="CAN_Sts_DeviceStatus">
+      <UserDefElement iecname="_05_CR2016_CP_Connection_Ok" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="_06_CR2016_OC_Connection_Ok" type="T_BOOL" byteoffset="1" vartype="VAR" />
+      <UserDefElement iecname="_15_CR2050_HYD_Connection_Ok" type="T_BOOL" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="_20_CR2012_Connection_Ok" type="T_BOOL" byteoffset="3" vartype="VAR" />
+      <UserDefElement iecname="Joystick_Connection_Ok" type="T_BOOL" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="Engine_Connection_Ok" type="T_BOOL" byteoffset="5" vartype="VAR" />
+      <UserDefElement iecname="HmiToPlc_Connection_Ok" type="T_BOOL" byteoffset="6" vartype="VAR" />
+      <UserDefElement iecname="Inclinometer_Connection_Ok" type="T_BOOL" byteoffset="7" vartype="VAR" />
+      <UserDefElement iecname="Propeller_Encoder_Connection_Ok" type="T_BOOL" byteoffset="8" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_CAN_Vis" size="2" nativesize="2" typeclass="Userdef" pouclass="STRUCTURE" iecname="CAN_Vis">
+      <UserDefElement iecname="Modem_Industry_4_0_Enabled" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Can_Error_Invis" type="T_BOOL" byteoffset="1" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_CR2012_InOut" size="6" nativesize="6" typeclass="Userdef" pouclass="STRUCTURE" iecname="CR2012_InOut">
+      <UserDefElement iecname="usiChannel" type="T_UINT" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="uiValueAnalog" type="T_UINT" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="Config" type="T_USINT" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="Status" type="T_BYTE" byteoffset="5" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_CR2016_InOut" size="6" nativesize="6" typeclass="Userdef" pouclass="STRUCTURE" iecname="CR2016_InOut">
+      <UserDefElement iecname="usiChannel" type="T_UINT" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="uiValueAnalog" type="T_UINT" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="Config" type="T_USINT" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="Status" type="T_BYTE" byteoffset="5" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_CR2050_InOut" size="6" nativesize="6" typeclass="Userdef" pouclass="STRUCTURE" iecname="CR2050_InOut">
+      <UserDefElement iecname="usiChannel" type="T_UINT" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="uiValueAnalog" type="T_UINT" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="Config" type="T_USINT" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="Status" type="T_BYTE" byteoffset="5" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_CR711S_InOut" size="6" nativesize="6" typeclass="Userdef" pouclass="STRUCTURE" iecname="CR711S_InOut">
+      <UserDefElement iecname="InChannel" type="T_UINT" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="uiValueAnalog" type="T_UINT" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="Config" type="T_USINT" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="Status" type="T_BYTE" byteoffset="5" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Can_Cmd" size="7" nativesize="7" typeclass="Userdef" pouclass="STRUCTURE" iecname="Can_Cmd">
+      <UserDefElement iecname="Not_Sending_ECU2_PDOs_CAN1" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Not_Sending_ECU3_PDOs_CAN1" type="T_BOOL" byteoffset="1" vartype="VAR" />
+      <UserDefElement iecname="Not_Sending_ECU4_PDOs_CAN1" type="T_BOOL" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="Not_Sending_ECU5_PDOs_CAN1" type="T_BOOL" byteoffset="3" vartype="VAR" />
+      <UserDefElement iecname="Not_Sending_ECU6_PDOs_CAN1" type="T_BOOL" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="Not_Sending_ECU7_PDOs_CAN1" type="T_BOOL" byteoffset="5" vartype="VAR" />
+      <UserDefElement iecname="Not_Sending_ECU8_PDOs_CAN1" type="T_BOOL" byteoffset="6" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Command_Type" size="2" nativesize="2" typeclass="Userdef" pouclass="STRUCTURE" iecname="Command_Type">
+      <UserDefElement iecname="Analog" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Digital" type="T_BOOL" byteoffset="1" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_DataColl_Cfg" size="1" nativesize="1" typeclass="Userdef" pouclass="STRUCTURE" iecname="DataColl_Cfg">
+      <UserDefElement iecname="Exor_Present" type="T_BOOL" byteoffset="0" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Engine_Cfg_Motor_Brand" size="2" nativesize="2" typeclass="Userdef" pouclass="STRUCTURE" iecname="Engine_Cfg_Motor_Brand">
+      <UserDefElement iecname="Volvo" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="CAT" type="T_BOOL" byteoffset="1" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Engine_Cmd" size="2" nativesize="2" typeclass="Userdef" pouclass="STRUCTURE" iecname="Engine_Cmd">
+      <UserDefElement iecname="Start" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Stop" type="T_BOOL" byteoffset="1" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Engine_Hmi" size="3" nativesize="3" typeclass="Userdef" pouclass="STRUCTURE" iecname="Engine_Hmi">
+      <UserDefElement iecname="Add_Rpm" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Sub_Rpm" type="T_BOOL" byteoffset="1" vartype="VAR" />
+      <UserDefElement iecname="Override" type="T_BOOL" byteoffset="2" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Engine_Sts_Regen" size="5" nativesize="5" typeclass="Userdef" pouclass="STRUCTURE" iecname="Engine_Sts_Regen">
+      <UserDefElement iecname="Request" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Inhibit" type="T_BOOL" byteoffset="1" vartype="VAR" />
+      <UserDefElement iecname="Active" type="T_BOOL" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="Temperature" type="T_BOOL" byteoffset="3" vartype="VAR" />
+      <UserDefElement iecname="Error" type="T_BOOL" byteoffset="4" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Engine_Vis" size="81" nativesize="81" typeclass="Userdef" pouclass="STRUCTURE" iecname="Engine_Vis">
+      <UserDefElement iecname="Icon" type="T_STRING" byteoffset="0" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Event_Cfg" size="7" nativesize="8" typeclass="Userdef" pouclass="STRUCTURE" iecname="Event_Cfg">
+      <UserDefElement iecname="i_DigitalSensorWarning_timeFilter" type="T_INT" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="i_DigitalSensorAlarm_timeFilter" type="T_INT" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="Minutes_Before_Alarm_Stops_Engine" type="T_INT" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="Enable_Stop_For_Missing_Comm_RemoteIO" type="T_BOOL" byteoffset="6" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Event_Hmi" size="3" nativesize="4" typeclass="Userdef" pouclass="STRUCTURE" iecname="Event_Hmi">
+      <UserDefElement iecname="Alarm_In_PopUp" type="T_UINT" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Acknowledge_PopUp" type="T_BOOL" byteoffset="2" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Event_Sts_PopUp" size="1" nativesize="1" typeclass="Userdef" pouclass="STRUCTURE" iecname="Event_Sts_PopUp">
+      <UserDefElement iecname="Minutes_Left" type="T_BYTE" byteoffset="0" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Excavators_Hmi" size="1" nativesize="1" typeclass="Userdef" pouclass="STRUCTURE" iecname="Excavators_Hmi">
+      <UserDefElement iecname="Bypass_Pressure_Sensor_Oil_Circuit" type="T_BOOL" byteoffset="0" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Excavators_Vis" size="2" nativesize="2" typeclass="Userdef" pouclass="STRUCTURE" iecname="Excavators_Vis">
+      <UserDefElement iecname="Text_List" type="T_INT" byteoffset="0" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Fuel_Tank_Cmd" size="2" nativesize="2" typeclass="Userdef" pouclass="STRUCTURE" iecname="Fuel_Tank_Cmd">
+      <UserDefElement iecname="Left_Tank" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Right_Tank" type="T_BOOL" byteoffset="1" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Fuel_Tank_Hmi" size="4" nativesize="4" typeclass="Userdef" pouclass="STRUCTURE" iecname="Fuel_Tank_Hmi">
+      <UserDefElement iecname="Bypass_Level_Sensor" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Auto_Mode" type="T_BOOL" byteoffset="1" vartype="VAR" />
+      <UserDefElement iecname="Force_Use_Left_Tank" type="T_BOOL" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="Force_Use_Right_Tank" type="T_BOOL" byteoffset="3" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Fuel_Tank_Vis" size="83" nativesize="83" typeclass="Userdef" pouclass="STRUCTURE" iecname="Fuel_Tank_Vis">
+      <UserDefElement iecname="Icon" type="T_STRING" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Fuel_Level_Tank1_Reading_Error" type="T_BOOL" byteoffset="81" vartype="VAR" />
+      <UserDefElement iecname="Fuel_Level_Tank2_Reading_Error" type="T_BOOL" byteoffset="82" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Hoist_Cmd" size="2" nativesize="2" typeclass="Userdef" pouclass="STRUCTURE" iecname="Hoist_Cmd">
+      <UserDefElement iecname="Wind" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Unwind" type="T_BOOL" byteoffset="1" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Hoist_Hmi" size="2" nativesize="2" typeclass="Userdef" pouclass="STRUCTURE" iecname="Hoist_Hmi">
+      <UserDefElement iecname="Encoder_Reset" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Bypass_Pressure_Sensor_Oil_Circuit" type="T_BOOL" byteoffset="1" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Hoist_Vis" size="2" nativesize="2" typeclass="Userdef" pouclass="STRUCTURE" iecname="Hoist_Vis">
+      <UserDefElement iecname="Pump_Depth_Scaled" type="T_INT" byteoffset="0" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Hull_Hmi" size="1" nativesize="1" typeclass="Userdef" pouclass="STRUCTURE" iecname="Hull_Hmi">
+      <UserDefElement iecname="Inclinometer_Reset" type="T_BOOL" byteoffset="0" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Hull_Sts" size="4" nativesize="4" typeclass="Userdef" pouclass="STRUCTURE" iecname="Hull_Sts">
+      <UserDefElement iecname="Inclination_X" type="T_INT" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Inclination_Y" type="T_INT" byteoffset="2" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Internal_Signal_Hmi" size="20" nativesize="20" typeclass="Userdef" pouclass="STRUCTURE" iecname="Internal_Signal_Hmi">
+      <UserDefElement iecname="Active_Page" type="T_INT" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Reset_Pb" type="T_BOOL" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="Ack_Pb" type="T_BOOL" byteoffset="3" vartype="VAR" />
+      <UserDefElement iecname="Restore_USB_Pars" type="T_BOOL" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="Ask_All_Parameters" type="T_BOOL" byteoffset="5" vartype="VAR" />
+      <UserDefElement iecname="Ask_All_Events" type="T_BOOL" byteoffset="6" vartype="VAR" />
+      <UserDefElement iecname="HMI_Status" type="T_INT" byteoffset="8" vartype="VAR" />
+      <UserDefElement iecname="Modify_BOOL_Par" type="T_BOOL" byteoffset="10" vartype="VAR" />
+      <UserDefElement iecname="BOOL_Par_to_Modify" type="T_INT" byteoffset="12" vartype="VAR" />
+      <UserDefElement iecname="Modify_INT_Par" type="T_BOOL" byteoffset="14" vartype="VAR" />
+      <UserDefElement iecname="INT_Par_to_Modify" type="T_INT" byteoffset="16" vartype="VAR" />
+      <UserDefElement iecname="Par_New_Value" type="T_INT" byteoffset="18" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Internal_Signal_Sts_Blinkers" size="4" nativesize="4" typeclass="Userdef" pouclass="STRUCTURE" iecname="Internal_Signal_Sts_Blinkers">
+      <UserDefElement iecname="_250MS" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="_500MS" type="T_BOOL" byteoffset="1" vartype="VAR" />
+      <UserDefElement iecname="_1000MS" type="T_BOOL" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="_2000MS" type="T_BOOL" byteoffset="3" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Internal_Signal_Sts_Ons" size="5" nativesize="5" typeclass="Userdef" pouclass="STRUCTURE" iecname="Internal_Signal_Sts_Ons">
+      <UserDefElement iecname="_250MS" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="_500MS" type="T_BOOL" byteoffset="1" vartype="VAR" />
+      <UserDefElement iecname="_1000MS" type="T_BOOL" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="_2000MS" type="T_BOOL" byteoffset="3" vartype="VAR" />
+      <UserDefElement iecname="_60SEC" type="T_BOOL" byteoffset="4" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Internal_Signal_Vis" size="1" nativesize="1" typeclass="Userdef" pouclass="STRUCTURE" iecname="Internal_Signal_Vis">
+      <UserDefElement iecname="Popup_Opened" type="T_BOOL" byteoffset="0" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Jetring_Sts" size="2" nativesize="2" typeclass="Userdef" pouclass="STRUCTURE" iecname="Jetring_Sts">
+      <UserDefElement iecname="Running" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Hydraulic_Valve_Error" type="T_BOOL" byteoffset="1" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_MachineMode_Cfg" size="1" nativesize="1" typeclass="Userdef" pouclass="STRUCTURE" iecname="MachineMode_Cfg">
+      <UserDefElement iecname="Enable_Machine_mode_Popups" type="T_BOOL" byteoffset="0" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_MachineMode_Sts_Selector_Mode" size="2" nativesize="2" typeclass="Userdef" pouclass="STRUCTURE" iecname="MachineMode_Sts_Selector_Mode">
+      <UserDefElement iecname="Work" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Navigation" type="T_BOOL" byteoffset="1" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Network_HMI" size="2" nativesize="2" typeclass="Userdef" pouclass="STRUCTURE" iecname="Network_HMI">
+      <UserDefElement iecname="Communication_OK" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Waiting_For_PLC" type="T_BOOL" byteoffset="1" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Oil_Cfg_Limit" size="8" nativesize="8" typeclass="Userdef" pouclass="STRUCTURE" iecname="Oil_Cfg_Limit">
+      <UserDefElement iecname="Warning_Limit" type="T_INT" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Alarm_Limit" type="T_INT" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="Start_Fans" type="T_INT" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="Stop_Fans" type="T_INT" byteoffset="6" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Oil_Cmd" size="1" nativesize="1" typeclass="Userdef" pouclass="STRUCTURE" iecname="Oil_Cmd">
+      <UserDefElement iecname="Activate_Fan_Oil_Cooler" type="T_BOOL" byteoffset="0" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Oil_Hmi" size="2" nativesize="2" typeclass="Userdef" pouclass="STRUCTURE" iecname="Oil_Hmi">
+      <UserDefElement iecname="Bypass_Level" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Bypass_Temp" type="T_BOOL" byteoffset="1" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Oil_Vis" size="172" nativesize="172" typeclass="Userdef" pouclass="STRUCTURE" iecname="Oil_Vis">
+      <UserDefElement iecname="Oil_Temp_Ok_Invis" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Oil_Temp_Low_Invis" type="T_BOOL" byteoffset="1" vartype="VAR" />
+      <UserDefElement iecname="Oil_Temp_Empty_Invis" type="T_BOOL" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="Oil_Level_Reading_Error" type="T_BOOL" byteoffset="3" vartype="VAR" />
+      <UserDefElement iecname="Oil_Temp_Reading_Error" type="T_BOOL" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="Oil_Temp_Status_List" type="T_INT" byteoffset="6" vartype="VAR" />
+      <UserDefElement iecname="Oil_Level_Status_List" type="T_INT" byteoffset="8" vartype="VAR" />
+      <UserDefElement iecname="Icon_Level" type="T_STRING" byteoffset="10" vartype="VAR" />
+      <UserDefElement iecname="Icon_Temp" type="T_STRING" byteoffset="91" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_PWM_Cfg_Struct" size="10" nativesize="10" typeclass="Userdef" pouclass="STRUCTURE" iecname="PWM_Cfg_Struct">
+      <UserDefElement iecname="uimA_Max" type="T_INT" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="uimA_Min" type="T_INT" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="uiFrequency" type="T_INT" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="uiDitherFrequency" type="T_INT" byteoffset="6" vartype="VAR" />
+      <UserDefElement iecname="uiDitherValue" type="T_INT" byteoffset="8" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_PhysicalIO_Cfg" size="4" nativesize="4" typeclass="Userdef" pouclass="STRUCTURE" iecname="PhysicalIO_Cfg">
+      <UserDefElement iecname="min4_20_sensorErrorValue" type="T_INT" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="max4_20_sensorErrorValue" type="T_INT" byteoffset="2" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_PhysicalIO_Hmi" size="2" nativesize="2" typeclass="Userdef" pouclass="STRUCTURE" iecname="PhysicalIO_Hmi">
+      <UserDefElement iecname="RemoteIO_ID_Request" type="T_INT" byteoffset="0" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Propeller_Cfg_Joystick" size="14" nativesize="14" typeclass="Userdef" pouclass="STRUCTURE" iecname="Propeller_Cfg_Joystick">
+      <UserDefElement iecname="Threshold_UpDown_Cmd" type="T_INT" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Threshold_LR_Cmd" type="T_INT" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="Threshold_FwBw_Cmd" type="T_INT" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="Axis_Min_Raw_Value" type="T_INT" byteoffset="6" vartype="VAR" />
+      <UserDefElement iecname="Axis_Max_Raw_Value" type="T_INT" byteoffset="8" vartype="VAR" />
+      <UserDefElement iecname="Thumbwheel_Min_Raw_Value" type="T_INT" byteoffset="10" vartype="VAR" />
+      <UserDefElement iecname="Thumbwheel_Max_Raw_Value" type="T_INT" byteoffset="12" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Propeller_Cmd" size="12" nativesize="12" typeclass="Userdef" pouclass="STRUCTURE" iecname="Propeller_Cmd">
+      <UserDefElement iecname="Up" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Down" type="T_BOOL" byteoffset="1" vartype="VAR" />
+      <UserDefElement iecname="Left" type="T_BOOL" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="Right" type="T_BOOL" byteoffset="3" vartype="VAR" />
+      <UserDefElement iecname="Forward" type="T_BOOL" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="Backward" type="T_BOOL" byteoffset="5" vartype="VAR" />
+      <UserDefElement iecname="Joystick_Human_Presence" type="T_BOOL" byteoffset="6" vartype="VAR" />
+      <UserDefElement iecname="Joystick_Power_Fwd" type="T_SINT" byteoffset="7" vartype="VAR" />
+      <UserDefElement iecname="Joystick_Power_Bwd" type="T_SINT" byteoffset="8" vartype="VAR" />
+      <UserDefElement iecname="Joystick_Left" type="T_SINT" byteoffset="9" vartype="VAR" />
+      <UserDefElement iecname="Joystick_Right" type="T_SINT" byteoffset="10" vartype="VAR" />
+      <UserDefElement iecname="Joystick_Thumbwheel" type="T_SINT" byteoffset="11" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Propeller_Hmi" size="2" nativesize="2" typeclass="Userdef" pouclass="STRUCTURE" iecname="Propeller_Hmi">
+      <UserDefElement iecname="Encoder_Reset" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Bypass_Pressure_Sensor_Oil_Circuit" type="T_BOOL" byteoffset="1" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Propeller_Sts_Joystick" size="9" nativesize="10" typeclass="Userdef" pouclass="STRUCTURE" iecname="Propeller_Sts_Joystick">
+      <UserDefElement iecname="Joystick_Axis_X" type="T_INT" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Joystick_Axis_Y" type="T_INT" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="Joystick_Thumbwheel" type="T_INT" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="Signal_Error_Axis_X" type="T_BOOL" byteoffset="6" vartype="VAR" />
+      <UserDefElement iecname="Signal_Error_Axis_Y" type="T_BOOL" byteoffset="7" vartype="VAR" />
+      <UserDefElement iecname="Enabled" type="T_BOOL" byteoffset="8" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Pump_Dredging_Hmi" size="5" nativesize="5" typeclass="Userdef" pouclass="STRUCTURE" iecname="Pump_Dredging_Hmi">
+      <UserDefElement iecname="Add_Rpm" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Sub_Rpm" type="T_BOOL" byteoffset="1" vartype="VAR" />
+      <UserDefElement iecname="Bypass_Pressure_Sensor_Oil_Main_Circuit" type="T_BOOL" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="Bypass_Pressure_Sensor_Oil_Sec_Circuit" type="T_BOOL" byteoffset="3" vartype="VAR" />
+      <UserDefElement iecname="Bypass_Flowmeter_Oil_Circuit" type="T_BOOL" byteoffset="4" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Pvg_Hmi" size="1" nativesize="1" typeclass="Userdef" pouclass="STRUCTURE" iecname="Pvg_Hmi">
+      <UserDefElement iecname="Bypass_Pressure_Sensor_Oil_Circuit" type="T_BOOL" byteoffset="0" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Safety_Cmd" size="1" nativesize="1" typeclass="Userdef" pouclass="STRUCTURE" iecname="Safety_Cmd">
+      <UserDefElement iecname="Global_Reset" type="T_BOOL" byteoffset="0" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Safety_Sts" size="2" nativesize="2" typeclass="Userdef" pouclass="STRUCTURE" iecname="Safety_Sts">
+      <UserDefElement iecname="Safety_Not_Ok" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Safety_Ok" type="T_BOOL" byteoffset="1" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Signal_Lamp_Cfg" size="2" nativesize="2" typeclass="Userdef" pouclass="STRUCTURE" iecname="Signal_Lamp_Cfg">
+      <UserDefElement iecname="i_batteryBreakerTime" type="T_INT" byteoffset="0" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Slurry_Vis" size="2" nativesize="2" typeclass="Userdef" pouclass="STRUCTURE" iecname="Slurry_Vis">
+      <UserDefElement iecname="Density_Sensor_Enabled" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Flow_Sensor_Enabled" type="T_BOOL" byteoffset="1" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Statistics_Hmi" size="6" nativesize="6" typeclass="Userdef" pouclass="STRUCTURE" iecname="Statistics_Hmi">
+      <UserDefElement iecname="Reset_Pump_Total_Hours" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Reset_Excav_Total_Hours" type="T_BOOL" byteoffset="1" vartype="VAR" />
+      <UserDefElement iecname="Reset_Pump_Service_Hours" type="T_BOOL" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="Reset_Excav_Service_Hours" type="T_BOOL" byteoffset="3" vartype="VAR" />
+      <UserDefElement iecname="Reset_Engine_Total_Hours" type="T_BOOL" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="Reset_Engine_Service_Hours" type="T_BOOL" byteoffset="5" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Statistics_Sts" size="18" nativesize="20" typeclass="Userdef" pouclass="STRUCTURE" iecname="Statistics_Sts">
+      <UserDefElement iecname="Dredging_Pump_Working_Hours" type="T_DINT" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Excavators_Working_Hours" type="T_DINT" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="Engine_Running_Hours" type="T_DINT" byteoffset="8" vartype="VAR" />
+      <UserDefElement iecname="Dredging_Pump_Service_Hours" type="T_INT" byteoffset="12" vartype="VAR" />
+      <UserDefElement iecname="Excavators_Service_Hours" type="T_INT" byteoffset="14" vartype="VAR" />
+      <UserDefElement iecname="Engine_Service_Hours" type="T_INT" byteoffset="16" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_System_Cfg_Mach_Details" size="247" nativesize="248" typeclass="Userdef" pouclass="STRUCTURE" iecname="System_Cfg_Mach_Details">
+      <UserDefElement iecname="Serial_ID" type="T_DINT" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Customer_Name" type="T_STRING" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="Model" type="T_STRING" byteoffset="85" vartype="VAR" />
+      <UserDefElement iecname="PLC_Software_Revision" type="T_STRING" byteoffset="166" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_System_Cfg_Power" size="2" nativesize="2" typeclass="Userdef" pouclass="STRUCTURE" iecname="System_Cfg_Power">
+      <UserDefElement iecname="Timeout_Shutdown_Off_Sec" type="T_INT" byteoffset="0" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_System_Cmd" size="1" nativesize="1" typeclass="Userdef" pouclass="STRUCTURE" iecname="System_Cmd">
+      <UserDefElement iecname="Switch_Off_HMI" type="T_BOOL" byteoffset="0" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_System_Hmi" size="4" nativesize="4" typeclass="Userdef" pouclass="STRUCTURE" iecname="System_Hmi">
+      <UserDefElement iecname="Restore_Factory" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="HMI_ShuttingDown" type="T_BOOL" byteoffset="1" vartype="VAR" />
+      <UserDefElement iecname="BackupParameterInProgress" type="T_BOOL" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="RestoreParameterInProgress" type="T_BOOL" byteoffset="3" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_System_Sts" size="12" nativesize="12" typeclass="Userdef" pouclass="STRUCTURE" iecname="System_Sts">
+      <UserDefElement iecname="Battery_Voltage" type="T_INT" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="ActivePasswordLevel" type="T_UINT" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="PLC_ShuttingDown" type="T_BOOL" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="Restoring_Factory" type="T_BOOL" byteoffset="5" vartype="VAR" />
+      <UserDefElement iecname="Creating_Backup" type="T_BOOL" byteoffset="6" vartype="VAR" />
+      <UserDefElement iecname="Restoring_Backup" type="T_BOOL" byteoffset="7" vartype="VAR" />
+      <UserDefElement iecname="INT_From_HMI" type="T_INT" byteoffset="8" vartype="VAR" />
+      <UserDefElement iecname="INT_From_PLC" type="T_INT" byteoffset="10" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_System_Vis" size="95" nativesize="96" typeclass="Userdef" pouclass="STRUCTURE" iecname="System_Vis">
+      <UserDefElement iecname="VarSimulation" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Year" type="T_UINT" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="Month" type="T_UINT" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="Day" type="T_UINT" byteoffset="6" vartype="VAR" />
+      <UserDefElement iecname="Hour" type="T_UINT" byteoffset="8" vartype="VAR" />
+      <UserDefElement iecname="Minute" type="T_UINT" byteoffset="10" vartype="VAR" />
+      <UserDefElement iecname="Second" type="T_UINT" byteoffset="12" vartype="VAR" />
+      <UserDefElement iecname="sDateTime" type="T_STRING" byteoffset="14" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Valve_Type" size="2" nativesize="2" typeclass="Userdef" pouclass="STRUCTURE" iecname="Valve_Type">
+      <UserDefElement iecname="PVEA" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="PVEHU" type="T_BOOL" byteoffset="1" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Winches_Cfg" size="4" nativesize="4" typeclass="Userdef" pouclass="STRUCTURE" iecname="Winches_Cfg">
+      <UserDefElement iecname="FL_Reverse_Direction" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="FR_Reverse_Direction" type="T_BOOL" byteoffset="1" vartype="VAR" />
+      <UserDefElement iecname="RL_Reverse_Direction" type="T_BOOL" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="RR_Reverse_Direction" type="T_BOOL" byteoffset="3" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Winches_Cmd" size="8" nativesize="8" typeclass="Userdef" pouclass="STRUCTURE" iecname="Winches_Cmd">
+      <UserDefElement iecname="FL_Wind" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="FL_Unwind" type="T_BOOL" byteoffset="1" vartype="VAR" />
+      <UserDefElement iecname="RL_Wind" type="T_BOOL" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="RL_Unwind" type="T_BOOL" byteoffset="3" vartype="VAR" />
+      <UserDefElement iecname="FR_Wind" type="T_BOOL" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="FR_Unwind" type="T_BOOL" byteoffset="5" vartype="VAR" />
+      <UserDefElement iecname="RR_Wind" type="T_BOOL" byteoffset="6" vartype="VAR" />
+      <UserDefElement iecname="RR_Unwind" type="T_BOOL" byteoffset="7" vartype="VAR" />
+    </TypeUserDef>
+    <TypeArray name="T_ARRAY__0__15__OF_CR2050_InOut" size="96" nativesize="96" typeclass="Array" iecname="ARRAY [0..15] OF CR2050_InOut" basetype="T_CR2050_InOut">
+      <ArrayDim minrange="0" maxrange="15" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__29__OF_CR711S_InOut" size="180" nativesize="180" typeclass="Array" iecname="ARRAY [0..29] OF CR711S_InOut" basetype="T_CR711S_InOut">
+      <ArrayDim minrange="0" maxrange="29" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__31__OF_CR711S_InOut" size="192" nativesize="192" typeclass="Array" iecname="ARRAY [0..31] OF CR711S_InOut" basetype="T_CR711S_InOut">
+      <ArrayDim minrange="0" maxrange="31" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__3__OF_CAN_Status_Channels" size="48" nativesize="48" typeclass="Array" iecname="ARRAY [0..3] OF CAN_Status_Channels" basetype="T_CAN_Status_Channels">
+      <ArrayDim minrange="0" maxrange="3" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__1__16__OF_CR2012_InOut" size="96" nativesize="96" typeclass="Array" iecname="ARRAY [1..16] OF CR2012_InOut" basetype="T_CR2012_InOut">
+      <ArrayDim minrange="1" maxrange="16" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__1__32__OF_CR2016_InOut" size="192" nativesize="192" typeclass="Array" iecname="ARRAY [1..32] OF CR2016_InOut" basetype="T_CR2016_InOut">
+      <ArrayDim minrange="1" maxrange="32" />
+    </TypeArray>
+    <TypeUserDef name="T_Air_Conditioning_Main" size="2" nativesize="2" typeclass="Userdef" pouclass="STRUCTURE" iecname="Air_Conditioning_Main">
+      <UserDefElement iecname="Sts" type="T_Air_Conditioning_Sts" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Cfg" type="T_Air_Conditioning_Cfg" byteoffset="1" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Almec4_0_Main" size="12" nativesize="12" typeclass="Userdef" pouclass="STRUCTURE" iecname="Almec4_0_Main">
+      <UserDefElement iecname="Cfg" type="T_Almec4_0_Cfg" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Hmi" type="T_Almec4_0_Hmi" byteoffset="1" vartype="VAR" />
+      <UserDefElement iecname="Sts" type="T_Almec4_0_Sts" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="Vis" type="T_Almec4_0_Vis" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="Cmd" type="T_Almec4_0_Cmd" byteoffset="4" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Batteries_Main" size="87" nativesize="92" typeclass="Userdef" pouclass="STRUCTURE" iecname="Batteries_Main">
+      <UserDefElement iecname="Sts" type="T_Batteries_Sts" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Cfg" type="T_Batteries_Cfg" byteoffset="6" vartype="VAR" />
+      <UserDefElement iecname="Vis" type="T_Batteries_Vis" byteoffset="6" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Booster_Main" size="5" nativesize="5" typeclass="Userdef" pouclass="STRUCTURE" iecname="Booster_Main">
+      <UserDefElement iecname="Cfg" type="T_Booster_Cfg" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Vis" type="T_Booster_Vis" byteoffset="2" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_DataColl_Main" size="1" nativesize="1" typeclass="Userdef" pouclass="STRUCTURE" iecname="DataColl_Main">
+      <UserDefElement iecname="Cfg" type="T_DataColl_Cfg" byteoffset="0" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Engine_Cfg" size="26" nativesize="26" typeclass="Userdef" pouclass="STRUCTURE" iecname="Engine_Cfg">
+      <UserDefElement iecname="Motor_Brand" type="T_Engine_Cfg_Motor_Brand" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="x_engineSpeedControlEnable" type="T_BOOL" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="x_TSC1_CRCenable" type="T_BOOL" byteoffset="3" vartype="VAR" />
+      <UserDefElement iecname="StageV" type="T_BOOL" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="CheckMaintenanceRequired" type="T_BOOL" byteoffset="5" vartype="VAR" />
+      <UserDefElement iecname="Engine_Comm_Breakdown_Delay" type="T_INT" byteoffset="6" vartype="VAR" />
+      <UserDefElement iecname="Engine_ON_Rpm_Threshold" type="T_INT" byteoffset="8" vartype="VAR" />
+      <UserDefElement iecname="Engine_Min_Speed_rpm" type="T_INT" byteoffset="10" vartype="VAR" />
+      <UserDefElement iecname="Engine_Max_Speed_rpm" type="T_INT" byteoffset="12" vartype="VAR" />
+      <UserDefElement iecname="Engine_Standby_Speed" type="T_INT" byteoffset="14" vartype="VAR" />
+      <UserDefElement iecname="Speed_Decrement_rpm" type="T_INT" byteoffset="16" vartype="VAR" />
+      <UserDefElement iecname="Speed_Increment_rpm" type="T_INT" byteoffset="18" vartype="VAR" />
+      <UserDefElement iecname="Stop_Button_Delay" type="T_INT" byteoffset="20" vartype="VAR" />
+      <UserDefElement iecname="Warm_Up_Delay" type="T_INT" byteoffset="22" vartype="VAR" />
+      <UserDefElement iecname="Start_Timeout" type="T_INT" byteoffset="24" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Engine_Sts" size="52" nativesize="52" typeclass="Userdef" pouclass="STRUCTURE" iecname="Engine_Sts">
+      <UserDefElement iecname="Rpm" type="T_INT" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Water_Temp" type="T_INT" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="Oil_Pressure" type="T_INT" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="Torque" type="T_INT" byteoffset="6" vartype="VAR" />
+      <UserDefElement iecname="Load" type="T_INT" byteoffset="8" vartype="VAR" />
+      <UserDefElement iecname="Requested_Speed" type="T_REAL" byteoffset="12" vartype="VAR" />
+      <UserDefElement iecname="Fuel_Consumption" type="T_INT" byteoffset="16" vartype="VAR" />
+      <UserDefElement iecname="IntakeAirTemp" type="T_INT" byteoffset="18" vartype="VAR" />
+      <UserDefElement iecname="Urea_Level" type="T_INT" byteoffset="20" vartype="VAR" />
+      <UserDefElement iecname="Urea_Temp" type="T_INT" byteoffset="22" vartype="VAR" />
+      <UserDefElement iecname="Running" type="T_BOOL" byteoffset="24" vartype="VAR" />
+      <UserDefElement iecname="Ready_To_Run" type="T_BOOL" byteoffset="25" vartype="VAR" />
+      <UserDefElement iecname="Intermediate_Speed_Act" type="T_BOOL" byteoffset="26" vartype="VAR" />
+      <UserDefElement iecname="Shutting_Down" type="T_BOOL" byteoffset="27" vartype="VAR" />
+      <UserDefElement iecname="Warming_Up_Completed" type="T_BOOL" byteoffset="28" vartype="VAR" />
+      <UserDefElement iecname="Service_Needed" type="T_BOOL" byteoffset="29" vartype="VAR" />
+      <UserDefElement iecname="Derating_Active" type="T_BOOL" byteoffset="30" vartype="VAR" />
+      <UserDefElement iecname="Low_Oil_Pressure" type="T_BOOL" byteoffset="31" vartype="VAR" />
+      <UserDefElement iecname="Starting" type="T_BOOL" byteoffset="32" vartype="VAR" />
+      <UserDefElement iecname="Warning" type="T_BOOL" byteoffset="33" vartype="VAR" />
+      <UserDefElement iecname="Alarm" type="T_BOOL" byteoffset="34" vartype="VAR" />
+      <UserDefElement iecname="SPN" type="T_UDINT" byteoffset="36" vartype="VAR" />
+      <UserDefElement iecname="FMI" type="T_UINT" byteoffset="40" vartype="VAR" />
+      <UserDefElement iecname="Maintenance_Required" type="T_BOOL" byteoffset="42" vartype="VAR" />
+      <UserDefElement iecname="Regen" type="T_Engine_Sts_Regen" byteoffset="43" vartype="VAR" />
+      <UserDefElement iecname="WaitBeforeCuttingPower" type="T_BOOL" byteoffset="48" vartype="VAR" />
+      <UserDefElement iecname="Percentage_Shutting_Down" type="T_INT" byteoffset="50" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Event_Sts_Group" size="20" nativesize="20" typeclass="Userdef" pouclass="STRUCTURE" iecname="Event_Sts_Group">
+      <UserDefElement iecname="Uint_Warning" type="T_ARRAY__0__3__OF_UINT" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Byte_Warning" type="T_ARRAY__0__7__OF_BYTE" byteoffset="8" vartype="VAR" />
+      <UserDefElement iecname="Uint_Alarm" type="T_UINT" byteoffset="16" vartype="VAR" />
+      <UserDefElement iecname="Byte_Alarm" type="T_ARRAY__0__1__OF_BYTE" byteoffset="18" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Fuel_Tank_Cfg" size="30" nativesize="30" typeclass="Userdef" pouclass="STRUCTURE" iecname="Fuel_Tank_Cfg">
+      <UserDefElement iecname="Level_Sensor_1" type="T_Analog_Sensor_Cfg" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Level_Sensor_2" type="T_Analog_Sensor_Cfg" byteoffset="10" vartype="VAR" />
+      <UserDefElement iecname="Reserve_Threshold_Perc" type="T_INT" byteoffset="20" vartype="VAR" />
+      <UserDefElement iecname="Timer_To_Change_Tank" type="T_INT" byteoffset="22" vartype="VAR" />
+      <UserDefElement iecname="Max_Diff_Allowed" type="T_INT" byteoffset="24" vartype="VAR" />
+      <UserDefElement iecname="Delay_Both_Tanks_Working" type="T_INT" byteoffset="26" vartype="VAR" />
+      <UserDefElement iecname="Percentage_Management" type="T_BOOL" byteoffset="28" vartype="VAR" />
+      <UserDefElement iecname="Timer_Management" type="T_BOOL" byteoffset="29" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Fuel_Tank_Sts" size="19" nativesize="20" typeclass="Userdef" pouclass="STRUCTURE" iecname="Fuel_Tank_Sts">
+      <UserDefElement iecname="Fuel_Level_1" type="T_Analog_Sensor_Struct_Real" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Fuel_Level_2" type="T_Analog_Sensor_Struct_Real" byteoffset="8" vartype="VAR" />
+      <UserDefElement iecname="Tank_1_Level_Low" type="T_BOOL" byteoffset="15" vartype="VAR" />
+      <UserDefElement iecname="Tank_2_Level_Low" type="T_BOOL" byteoffset="16" vartype="VAR" />
+      <UserDefElement iecname="Tank_1_Level_Empty" type="T_BOOL" byteoffset="17" vartype="VAR" />
+      <UserDefElement iecname="Tank_2_Level_Empty" type="T_BOOL" byteoffset="18" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Hull_Main" size="5" nativesize="6" typeclass="Userdef" pouclass="STRUCTURE" iecname="Hull_Main">
+      <UserDefElement iecname="Cfg" type="T_Hull_Cfg" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Sts" type="T_Hull_Sts" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Hmi" type="T_Hull_Hmi" byteoffset="4" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Internal_Signal_Cfg_Password" size="8" nativesize="8" typeclass="Userdef" pouclass="STRUCTURE" iecname="Internal_Signal_Cfg_Password">
+      <UserDefElement iecname="Level" type="T_ARRAY__0__2__OF_INT" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Delay_Pass_Expire" type="T_INT" byteoffset="6" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Internal_Signal_Sts" size="22" nativesize="22" typeclass="Userdef" pouclass="STRUCTURE" iecname="Internal_Signal_Sts">
+      <UserDefElement iecname="Always_On" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Always_Off" type="T_BOOL" byteoffset="1" vartype="VAR" />
+      <UserDefElement iecname="Enable_Commands_Ok" type="T_BOOL" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="Ready_To_Receive_Commands" type="T_BOOL" byteoffset="3" vartype="VAR" />
+      <UserDefElement iecname="Enable_Correctly_Pressed" type="T_BOOL" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="Parameter_Editing_Error" type="T_BOOL" byteoffset="5" vartype="VAR" />
+      <UserDefElement iecname="All_Parameters_Received" type="T_BOOL" byteoffset="6" vartype="VAR" />
+      <UserDefElement iecname="Error_Writing_All_Parameter" type="T_BOOL" byteoffset="7" vartype="VAR" />
+      <UserDefElement iecname="Blinkers" type="T_Internal_Signal_Sts_Blinkers" byteoffset="8" vartype="VAR" />
+      <UserDefElement iecname="Ons" type="T_Internal_Signal_Sts_Ons" byteoffset="12" vartype="VAR" />
+      <UserDefElement iecname="MachineStatus" type="T_INT" byteoffset="18" vartype="VAR" />
+      <UserDefElement iecname="WorkingMode" type="T_INT" byteoffset="20" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Jetring_Main" size="2" nativesize="2" typeclass="Userdef" pouclass="STRUCTURE" iecname="Jetring_Main">
+      <UserDefElement iecname="Sts" type="T_Jetring_Sts" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Cfg" type="T_Jetring_Cfg" byteoffset="2" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_MachineMode_Sts" size="9" nativesize="9" typeclass="Userdef" pouclass="STRUCTURE" iecname="MachineMode_Sts">
+      <UserDefElement iecname="Selector" type="T_MachineMode_Sts_Selector_Mode" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Inhibit_Change_Mode_To_Navi" type="T_BOOL" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="Inhibit_Change_Mode_To_Work" type="T_BOOL" byteoffset="3" vartype="VAR" />
+      <UserDefElement iecname="Inhibit_Navi_Show_Popup" type="T_BOOL" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="Inhibit_Work_Show_Popup" type="T_BOOL" byteoffset="5" vartype="VAR" />
+      <UserDefElement iecname="Press_Enable_Show_Popup" type="T_BOOL" byteoffset="6" vartype="VAR" />
+      <UserDefElement iecname="NotPossible_In_Navi_Show_Popup" type="T_BOOL" byteoffset="7" vartype="VAR" />
+      <UserDefElement iecname="NotPossible_In_Work_Show_Popup" type="T_BOOL" byteoffset="8" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Main_n_Booster_Sts_Pressure" size="15" nativesize="16" typeclass="Userdef" pouclass="STRUCTURE" iecname="Main_n_Booster_Sts_Pressure">
+      <UserDefElement iecname="Main_Circuit" type="T_Analog_Sensor_Struct_Real" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Booster" type="T_Analog_Sensor_Struct_Real" byteoffset="8" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Main_n_Secondary_Sts_Pressure" size="15" nativesize="16" typeclass="Userdef" pouclass="STRUCTURE" iecname="Main_n_Secondary_Sts_Pressure">
+      <UserDefElement iecname="Main_Circuit" type="T_Analog_Sensor_Struct_Real" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Secondary_Circuit" type="T_Analog_Sensor_Struct_Real" byteoffset="8" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Oil_Cfg" size="41" nativesize="42" typeclass="Userdef" pouclass="STRUCTURE" iecname="Oil_Cfg">
+      <UserDefElement iecname="Level_Digital" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Temp_Digital" type="T_BOOL" byteoffset="1" vartype="VAR" />
+      <UserDefElement iecname="Filter_1_Present" type="T_BOOL" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="Filter_2_Present" type="T_BOOL" byteoffset="3" vartype="VAR" />
+      <UserDefElement iecname="Filter_3_Present" type="T_BOOL" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="Filter_4_Present" type="T_BOOL" byteoffset="5" vartype="VAR" />
+      <UserDefElement iecname="Filter_5_Present" type="T_BOOL" byteoffset="6" vartype="VAR" />
+      <UserDefElement iecname="Filter_6_Present" type="T_BOOL" byteoffset="7" vartype="VAR" />
+      <UserDefElement iecname="Filter_7_Present" type="T_BOOL" byteoffset="8" vartype="VAR" />
+      <UserDefElement iecname="Filter_8_Present" type="T_BOOL" byteoffset="9" vartype="VAR" />
+      <UserDefElement iecname="Filter_9_Present" type="T_BOOL" byteoffset="10" vartype="VAR" />
+      <UserDefElement iecname="Filter_10_Present" type="T_BOOL" byteoffset="11" vartype="VAR" />
+      <UserDefElement iecname="Temp_Analog" type="T_Analog_Sensor_Cfg" byteoffset="12" vartype="VAR" />
+      <UserDefElement iecname="Level_Analog" type="T_Analog_Sensor_Cfg" byteoffset="22" vartype="VAR" />
+      <UserDefElement iecname="Limits" type="T_Oil_Cfg_Limit" byteoffset="32" vartype="VAR" />
+      <UserDefElement iecname="Oil_Cooling_Fans_Electric" type="T_BOOL" byteoffset="40" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Oil_Sts" size="34" nativesize="36" typeclass="Userdef" pouclass="STRUCTURE" iecname="Oil_Sts">
+      <UserDefElement iecname="Aspiration_Valves_Opened" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Oil_Level" type="T_Analog_Sensor_Struct_Real" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="Oil_Lvl_Above_Warning" type="T_BOOL" byteoffset="11" vartype="VAR" />
+      <UserDefElement iecname="Oil_Lvl_Above_Alarm" type="T_BOOL" byteoffset="12" vartype="VAR" />
+      <UserDefElement iecname="Oil_Lvl_Reading_Error" type="T_BOOL" byteoffset="13" vartype="VAR" />
+      <UserDefElement iecname="Oil_Temp" type="T_Analog_Sensor_Struct_Real" byteoffset="16" vartype="VAR" />
+      <UserDefElement iecname="Oil_Temp_Below_Warning" type="T_BOOL" byteoffset="23" vartype="VAR" />
+      <UserDefElement iecname="Oil_Temp_Below_Alarm" type="T_BOOL" byteoffset="24" vartype="VAR" />
+      <UserDefElement iecname="Oil_Temp_Reading_Error" type="T_BOOL" byteoffset="25" vartype="VAR" />
+      <UserDefElement iecname="Filter_1_Ok" type="T_BOOL" byteoffset="26" vartype="VAR" />
+      <UserDefElement iecname="Filter_2_Ok" type="T_BOOL" byteoffset="27" vartype="VAR" />
+      <UserDefElement iecname="Filter_3_Ok" type="T_BOOL" byteoffset="28" vartype="VAR" />
+      <UserDefElement iecname="Filter_4_Ok" type="T_BOOL" byteoffset="29" vartype="VAR" />
+      <UserDefElement iecname="Filter_5_Ok" type="T_BOOL" byteoffset="30" vartype="VAR" />
+      <UserDefElement iecname="Filter_6_Ok" type="T_BOOL" byteoffset="31" vartype="VAR" />
+      <UserDefElement iecname="Filter_7_Ok" type="T_BOOL" byteoffset="32" vartype="VAR" />
+      <UserDefElement iecname="Filter_8_Ok" type="T_BOOL" byteoffset="33" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_PVEA_Cfg_Hydraulic_Controls" size="26" nativesize="26" typeclass="Userdef" pouclass="STRUCTURE" iecname="PVEA_Cfg_Hydraulic_Controls">
+      <UserDefElement iecname="PVEA_Max_Value" type="T_INT" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="PVEA_Min_Value" type="T_INT" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="PVEA_Neutral_Value" type="T_INT" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="RampAscendingPercValue" type="T_INT" byteoffset="6" vartype="VAR" />
+      <UserDefElement iecname="RampDescendingPercValue" type="T_INT" byteoffset="8" vartype="VAR" />
+      <UserDefElement iecname="RampTimeBase" type="T_INT" byteoffset="10" vartype="VAR" />
+      <UserDefElement iecname="TimeoutDisableValve_s" type="T_INT" byteoffset="12" vartype="VAR" />
+      <UserDefElement iecname="DeadBand" type="T_INT" byteoffset="14" vartype="VAR" />
+      <UserDefElement iecname="CFG_PWM" type="T_PWM_Cfg_Struct" byteoffset="16" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Pump_Dredging_Cfg_Hydraulic_Controls" size="32" nativesize="32" typeclass="Userdef" pouclass="STRUCTURE" iecname="Pump_Dredging_Cfg_Hydraulic_Controls">
+      <UserDefElement iecname="StartingValuePerc" type="T_INT" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="RampAscendingPercValue" type="T_INT" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="RampDescendingPercValue" type="T_INT" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="RampTimeBase" type="T_INT" byteoffset="6" vartype="VAR" />
+      <UserDefElement iecname="DelayShutOff" type="T_INT" byteoffset="8" vartype="VAR" />
+      <UserDefElement iecname="Secondary_Circuit_Always_Enabled" type="T_BOOL" byteoffset="10" vartype="VAR" />
+      <UserDefElement iecname="CFG_PWM_Main" type="T_PWM_Cfg_Struct" byteoffset="12" vartype="VAR" />
+      <UserDefElement iecname="CFG_PWM_Second" type="T_PWM_Cfg_Struct" byteoffset="22" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Pvg_Cfg" size="10" nativesize="10" typeclass="Userdef" pouclass="STRUCTURE" iecname="Pvg_Cfg">
+      <UserDefElement iecname="Oil_Pressure" type="T_Analog_Sensor_Cfg" byteoffset="0" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Pvg_Sts" size="7" nativesize="8" typeclass="Userdef" pouclass="STRUCTURE" iecname="Pvg_Sts">
+      <UserDefElement iecname="Oil_Pressure" type="T_Analog_Sensor_Struct_Real" byteoffset="0" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Safety_Main" size="3" nativesize="3" typeclass="Userdef" pouclass="STRUCTURE" iecname="Safety_Main">
+      <UserDefElement iecname="Cmd" type="T_Safety_Cmd" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Sts" type="T_Safety_Sts" byteoffset="1" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Signal_Lamp_Main" size="2" nativesize="2" typeclass="Userdef" pouclass="STRUCTURE" iecname="Signal_Lamp_Main">
+      <UserDefElement iecname="Cfg" type="T_Signal_Lamp_Cfg" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Out" type="T_Signal_Lamp_Out" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="Sts" type="T_Signal_Lamp_Sts" byteoffset="2" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Slurry_Cfg" size="20" nativesize="20" typeclass="Userdef" pouclass="STRUCTURE" iecname="Slurry_Cfg">
+      <UserDefElement iecname="Flow_Sensor" type="T_Analog_Sensor_Cfg" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Density_Sensor" type="T_Analog_Sensor_Cfg" byteoffset="10" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Slurry_Sts" size="18" nativesize="20" typeclass="Userdef" pouclass="STRUCTURE" iecname="Slurry_Sts">
+      <UserDefElement iecname="Flow" type="T_Analog_Sensor_Struct_Real" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Density" type="T_Analog_Sensor_Struct_Real" byteoffset="8" vartype="VAR" />
+      <UserDefElement iecname="Production" type="T_INT" byteoffset="16" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Statistics_Main" size="24" nativesize="28" typeclass="Userdef" pouclass="STRUCTURE" iecname="Statistics_Main">
+      <UserDefElement iecname="Cfg" type="T_Statistics_Cfg" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Sts" type="T_Statistics_Sts" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Hmi" type="T_Statistics_Hmi" byteoffset="18" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_System_Cfg" size="250" nativesize="252" typeclass="Userdef" pouclass="STRUCTURE" iecname="System_Cfg">
+      <UserDefElement iecname="Mach_Details" type="T_System_Cfg_Mach_Details" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Power_Manage" type="T_System_Cfg_Power" byteoffset="248" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Winches_Main" size="12" nativesize="12" typeclass="Userdef" pouclass="STRUCTURE" iecname="Winches_Main">
+      <UserDefElement iecname="Cfg" type="T_Winches_Cfg" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Sts" type="T_Winches_Sts" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="Cmd" type="T_Winches_Cmd" byteoffset="4" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_CAN_Sts" size="58" nativesize="58" typeclass="Userdef" pouclass="STRUCTURE" iecname="CAN_Sts">
+      <UserDefElement iecname="DeviceStatus" type="T_CAN_Sts_DeviceStatus" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Ch_Status" type="T_ARRAY__0__3__OF_CAN_Status_Channels" byteoffset="10" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Engine_Main" size="166" nativesize="168" typeclass="Userdef" pouclass="STRUCTURE" iecname="Engine_Main">
+      <UserDefElement iecname="Cfg" type="T_Engine_Cfg" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Sts" type="T_Engine_Sts" byteoffset="28" vartype="VAR" />
+      <UserDefElement iecname="Hmi" type="T_Engine_Hmi" byteoffset="80" vartype="VAR" />
+      <UserDefElement iecname="Vis" type="T_Engine_Vis" byteoffset="83" vartype="VAR" />
+      <UserDefElement iecname="Cmd" type="T_Engine_Cmd" byteoffset="164" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Event_Sts" size="210" nativesize="210" typeclass="Userdef" pouclass="STRUCTURE" iecname="Event_Sts">
+      <UserDefElement iecname="New_Warning" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="New_Alarm" type="T_BOOL" byteoffset="1" vartype="VAR" />
+      <UserDefElement iecname="Warning_Present" type="T_BOOL" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="Alarm_Present" type="T_BOOL" byteoffset="3" vartype="VAR" />
+      <UserDefElement iecname="Check_Events" type="T_BOOL" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="Group" type="T_Event_Sts_Group" byteoffset="6" vartype="VAR" />
+      <UserDefElement iecname="PopUp" type="T_Event_Sts_PopUp" byteoffset="26" vartype="VAR" />
+      <UserDefElement iecname="Warning" type="T_ARRAY__0__150__OF_BOOL" byteoffset="27" vartype="VAR" />
+      <UserDefElement iecname="Alarm" type="T_ARRAY__0__31__OF_BOOL" byteoffset="178" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Excavators_Cfg" size="42" nativesize="42" typeclass="Userdef" pouclass="STRUCTURE" iecname="Excavators_Cfg">
+      <UserDefElement iecname="Present" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Direction" type="T_BOOL" byteoffset="1" vartype="VAR" />
+      <UserDefElement iecname="Hydraulic_Cmd" type="T_PVEA_Cfg_Hydraulic_Controls" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="Oil_Pressure" type="T_Analog_Sensor_Cfg" byteoffset="28" vartype="VAR" />
+      <UserDefElement iecname="Valve_Type" type="T_Valve_Type" byteoffset="38" vartype="VAR" />
+      <UserDefElement iecname="Command_Type" type="T_Command_Type" byteoffset="40" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Excavators_Sts" size="31" nativesize="36" typeclass="Userdef" pouclass="STRUCTURE" iecname="Excavators_Sts">
+      <UserDefElement iecname="Oil_Pressure" type="T_Main_n_Booster_Sts_Pressure" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Oil_Flow" type="T_Analog_Sensor_Struct_Real" byteoffset="16" vartype="VAR" />
+      <UserDefElement iecname="Running" type="T_BOOL" byteoffset="23" vartype="VAR" />
+      <UserDefElement iecname="Stopped" type="T_BOOL" byteoffset="24" vartype="VAR" />
+      <UserDefElement iecname="Work_Running" type="T_BOOL" byteoffset="25" vartype="VAR" />
+      <UserDefElement iecname="Reverse_Running" type="T_BOOL" byteoffset="26" vartype="VAR" />
+      <UserDefElement iecname="Valve_Error" type="T_BOOL" byteoffset="27" vartype="VAR" />
+      <UserDefElement iecname="Setpoint_Percentage" type="T_INT" byteoffset="28" vartype="VAR" />
+      <UserDefElement iecname="Maintenance_Required" type="T_BOOL" byteoffset="30" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Fuel_Tank_Main" size="140" nativesize="144" typeclass="Userdef" pouclass="STRUCTURE" iecname="Fuel_Tank_Main">
+      <UserDefElement iecname="Cfg" type="T_Fuel_Tank_Cfg" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Sts" type="T_Fuel_Tank_Sts" byteoffset="32" vartype="VAR" />
+      <UserDefElement iecname="Vis" type="T_Fuel_Tank_Vis" byteoffset="51" vartype="VAR" />
+      <UserDefElement iecname="Hmi" type="T_Fuel_Tank_Hmi" byteoffset="134" vartype="VAR" />
+      <UserDefElement iecname="Cmd" type="T_Fuel_Tank_Cmd" byteoffset="138" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Hoist_Cfg" size="56" nativesize="56" typeclass="Userdef" pouclass="STRUCTURE" iecname="Hoist_Cfg">
+      <UserDefElement iecname="Present" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Direction" type="T_BOOL" byteoffset="1" vartype="VAR" />
+      <UserDefElement iecname="Hydraulic_Cmd" type="T_PVEA_Cfg_Hydraulic_Controls" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="Oil_Pressure" type="T_Analog_Sensor_Cfg" byteoffset="28" vartype="VAR" />
+      <UserDefElement iecname="Encoder_Depth" type="T_Analog_Sensor_Cfg" byteoffset="38" vartype="VAR" />
+      <UserDefElement iecname="Max_Cable_Meters_x10" type="T_INT" byteoffset="48" vartype="VAR" />
+      <UserDefElement iecname="Value_Interval_For_Average" type="T_INT" byteoffset="50" vartype="VAR" />
+      <UserDefElement iecname="Depth_Treshold_Inhibit_Navi" type="T_INT" byteoffset="52" vartype="VAR" />
+      <UserDefElement iecname="Limit_Up_Present" type="T_BOOL" byteoffset="54" vartype="VAR" />
+      <UserDefElement iecname="Max_Unwind_Present" type="T_BOOL" byteoffset="55" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Hoist_Sts" size="35" nativesize="36" typeclass="Userdef" pouclass="STRUCTURE" iecname="Hoist_Sts">
+      <UserDefElement iecname="Oil_Pressure" type="T_Main_n_Booster_Sts_Pressure" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Pump_Depth" type="T_Analog_Sensor_Struct_Real" byteoffset="16" vartype="VAR" />
+      <UserDefElement iecname="Pump_Weight" type="T_Analog_Sensor_Struct_Real" byteoffset="24" vartype="VAR" />
+      <UserDefElement iecname="Valve_Error" type="T_BOOL" byteoffset="31" vartype="VAR" />
+      <UserDefElement iecname="Max_Unwind" type="T_BOOL" byteoffset="32" vartype="VAR" />
+      <UserDefElement iecname="Up_Limit_Reached" type="T_BOOL" byteoffset="33" vartype="VAR" />
+      <UserDefElement iecname="Running" type="T_BOOL" byteoffset="34" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Internal_Signal_Cfg" size="12" nativesize="12" typeclass="Userdef" pouclass="STRUCTURE" iecname="Internal_Signal_Cfg">
+      <UserDefElement iecname="ui_OperatorCommandReadyTime" type="T_UINT" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Password" type="T_Internal_Signal_Cfg_Password" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="EnableButtonForMovementPresent" type="T_BOOL" byteoffset="10" vartype="VAR" />
+      <UserDefElement iecname="Inhibit_Switch_Off" type="T_BOOL" byteoffset="11" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_MachinMode_Main" size="10" nativesize="10" typeclass="Userdef" pouclass="STRUCTURE" iecname="MachinMode_Main">
+      <UserDefElement iecname="Cfg" type="T_MachineMode_Cfg" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Sts" type="T_MachineMode_Sts" byteoffset="1" vartype="VAR" />
+      <UserDefElement iecname="Vis" type="T_MachineMode_Vis" byteoffset="10" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Oil_Main" size="254" nativesize="256" typeclass="Userdef" pouclass="STRUCTURE" iecname="Oil_Main">
+      <UserDefElement iecname="Cfg" type="T_Oil_Cfg" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Sts" type="T_Oil_Sts" byteoffset="44" vartype="VAR" />
+      <UserDefElement iecname="Cmd" type="T_Oil_Cmd" byteoffset="78" vartype="VAR" />
+      <UserDefElement iecname="Vis" type="T_Oil_Vis" byteoffset="80" vartype="VAR" />
+      <UserDefElement iecname="Hmi" type="T_Oil_Hmi" byteoffset="252" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_PhysicalIO_Sts_CR2012" size="97" nativesize="98" typeclass="Userdef" pouclass="STRUCTURE" iecname="PhysicalIO_Sts_CR2012">
+      <UserDefElement iecname="InOut" type="T_ARRAY__1__16__OF_CR2012_InOut" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Read_Done" type="T_BOOL" byteoffset="96" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_PhysicalIO_Sts_CR2016" size="193" nativesize="194" typeclass="Userdef" pouclass="STRUCTURE" iecname="PhysicalIO_Sts_CR2016">
+      <UserDefElement iecname="InOut" type="T_ARRAY__1__32__OF_CR2016_InOut" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Read_Done" type="T_BOOL" byteoffset="192" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_PhysicalIO_Sts_CR2050" size="98" nativesize="98" typeclass="Userdef" pouclass="STRUCTURE" iecname="PhysicalIO_Sts_CR2050">
+      <UserDefElement iecname="InOut" type="T_ARRAY__0__15__OF_CR2050_InOut" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Read_Done" type="T_BOOL" byteoffset="96" vartype="VAR" />
+      <UserDefElement iecname="Ready" type="T_BOOL" byteoffset="97" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_PhysicalIO_Sts_CR711S" size="376" nativesize="376" typeclass="Userdef" pouclass="STRUCTURE" iecname="PhysicalIO_Sts_CR711S">
+      <UserDefElement iecname="IN" type="T_ARRAY__0__31__OF_CR711S_InOut" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="OUT" type="T_ARRAY__0__29__OF_CR711S_InOut" byteoffset="192" vartype="VAR" />
+      <UserDefElement iecname="Undervoltage_Output_VBB0" type="T_BOOL" byteoffset="372" vartype="VAR" />
+      <UserDefElement iecname="Undervoltage_Output_VBB1" type="T_BOOL" byteoffset="373" vartype="VAR" />
+      <UserDefElement iecname="Undervoltage_Output_VBB2" type="T_BOOL" byteoffset="374" vartype="VAR" />
+      <UserDefElement iecname="Configuration_Not_Allowed" type="T_BOOL" byteoffset="375" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Propeller_Cfg" size="56" nativesize="56" typeclass="Userdef" pouclass="STRUCTURE" iecname="Propeller_Cfg">
+      <UserDefElement iecname="Present" type="T_BOOL" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Direction" type="T_BOOL" byteoffset="1" vartype="VAR" />
+      <UserDefElement iecname="Hydraulic_Cmd" type="T_PVEA_Cfg_Hydraulic_Controls" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="Oil_Pressure" type="T_Analog_Sensor_Cfg" byteoffset="28" vartype="VAR" />
+      <UserDefElement iecname="Joystick" type="T_Propeller_Cfg_Joystick" byteoffset="38" vartype="VAR" />
+      <UserDefElement iecname="Enable_AutoZero" type="T_BOOL" byteoffset="52" vartype="VAR" />
+      <UserDefElement iecname="Zero_Position_Tolerance" type="T_INT" byteoffset="54" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Propeller_Sts" size="42" nativesize="44" typeclass="Userdef" pouclass="STRUCTURE" iecname="Propeller_Sts">
+      <UserDefElement iecname="Oil_Pressure" type="T_Main_n_Booster_Sts_Pressure" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Setpoint_Percentage_Main" type="T_INT" byteoffset="16" vartype="VAR" />
+      <UserDefElement iecname="Setpoint_Perc_Ramped_Main" type="T_INT" byteoffset="18" vartype="VAR" />
+      <UserDefElement iecname="Hydraulic_Valve_Error" type="T_BOOL" byteoffset="20" vartype="VAR" />
+      <UserDefElement iecname="Encoder" type="T_Analog_Sensor_Struct_Real" byteoffset="24" vartype="VAR" />
+      <UserDefElement iecname="Joystick" type="T_Propeller_Sts_Joystick" byteoffset="32" vartype="VAR" />
+      <UserDefElement iecname="Running" type="T_BOOL" byteoffset="41" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Pump_Dredging_Cfg" size="65" nativesize="66" typeclass="Userdef" pouclass="STRUCTURE" iecname="Pump_Dredging_Cfg">
+      <UserDefElement iecname="Command_Type" type="T_Command_Type" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Oil_Flow" type="T_Analog_Sensor_Cfg" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="Oil_Pressure_Main" type="T_Analog_Sensor_Cfg" byteoffset="12" vartype="VAR" />
+      <UserDefElement iecname="Oil_Pressure_Second" type="T_Analog_Sensor_Cfg" byteoffset="22" vartype="VAR" />
+      <UserDefElement iecname="Hydraulic_Cmd" type="T_Pump_Dredging_Cfg_Hydraulic_Controls" byteoffset="32" vartype="VAR" />
+      <UserDefElement iecname="DuplomaticValvePresent" type="T_BOOL" byteoffset="64" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Pump_Dredging_Sts" size="35" nativesize="36" typeclass="Userdef" pouclass="STRUCTURE" iecname="Pump_Dredging_Sts">
+      <UserDefElement iecname="Oil_Pressure" type="T_Main_n_Secondary_Sts_Pressure" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Oil_Flow" type="T_Analog_Sensor_Struct_Real" byteoffset="16" vartype="VAR" />
+      <UserDefElement iecname="Setpoint_Percentage_Main" type="T_INT" byteoffset="24" vartype="VAR" />
+      <UserDefElement iecname="Setpoint_Percentage_Sec" type="T_INT" byteoffset="26" vartype="VAR" />
+      <UserDefElement iecname="Setpoint_Perc_Ramped_Main" type="T_INT" byteoffset="28" vartype="VAR" />
+      <UserDefElement iecname="Setpoint_Perc_Ramped_Sec" type="T_INT" byteoffset="30" vartype="VAR" />
+      <UserDefElement iecname="Running" type="T_BOOL" byteoffset="32" vartype="VAR" />
+      <UserDefElement iecname="Maintenance_Required" type="T_BOOL" byteoffset="33" vartype="VAR" />
+      <UserDefElement iecname="Hydraulic_Cmd_Err" type="T_BOOL" byteoffset="34" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Pvg_Main" size="19" nativesize="20" typeclass="Userdef" pouclass="STRUCTURE" iecname="Pvg_Main">
+      <UserDefElement iecname="Sts" type="T_Pvg_Sts" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Cfg" type="T_Pvg_Cfg" byteoffset="8" vartype="VAR" />
+      <UserDefElement iecname="Hmi" type="T_Pvg_Hmi" byteoffset="18" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Slurry_Main" size="40" nativesize="44" typeclass="Userdef" pouclass="STRUCTURE" iecname="Slurry_Main">
+      <UserDefElement iecname="Sts" type="T_Slurry_Sts" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Vis" type="T_Slurry_Vis" byteoffset="18" vartype="VAR" />
+      <UserDefElement iecname="Cfg" type="T_Slurry_Cfg" byteoffset="20" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_System_Main" size="363" nativesize="368" typeclass="Userdef" pouclass="STRUCTURE" iecname="System_Main">
+      <UserDefElement iecname="Cfg" type="T_System_Cfg" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Vis" type="T_System_Vis" byteoffset="250" vartype="VAR" />
+      <UserDefElement iecname="Sts" type="T_System_Sts" byteoffset="346" vartype="VAR" />
+      <UserDefElement iecname="Hmi" type="T_System_Hmi" byteoffset="358" vartype="VAR" />
+      <UserDefElement iecname="Cmd" type="T_System_Cmd" byteoffset="362" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_CAN_Main" size="74" nativesize="74" typeclass="Userdef" pouclass="STRUCTURE" iecname="CAN_Main">
+      <UserDefElement iecname="Cfg" type="T_CAN_Cfg" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Cmd" type="T_Can_Cmd" byteoffset="7" vartype="VAR" />
+      <UserDefElement iecname="Sts" type="T_CAN_Sts" byteoffset="14" vartype="VAR" />
+      <UserDefElement iecname="Vis" type="T_CAN_Vis" byteoffset="72" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Event_Main" size="221" nativesize="222" typeclass="Userdef" pouclass="STRUCTURE" iecname="Event_Main">
+      <UserDefElement iecname="Cfg" type="T_Event_Cfg" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Sts" type="T_Event_Sts" byteoffset="8" vartype="VAR" />
+      <UserDefElement iecname="Out" type="T_Event_Out" byteoffset="218" vartype="VAR" />
+      <UserDefElement iecname="Hmi" type="T_Event_Hmi" byteoffset="218" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Excavators_Main" size="79" nativesize="84" typeclass="Userdef" pouclass="STRUCTURE" iecname="Excavators_Main">
+      <UserDefElement iecname="Cfg" type="T_Excavators_Cfg" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Sts" type="T_Excavators_Sts" byteoffset="44" vartype="VAR" />
+      <UserDefElement iecname="Vis" type="T_Excavators_Vis" byteoffset="76" vartype="VAR" />
+      <UserDefElement iecname="Hmi" type="T_Excavators_Hmi" byteoffset="78" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Hoist_Main" size="99" nativesize="100" typeclass="Userdef" pouclass="STRUCTURE" iecname="Hoist_Main">
+      <UserDefElement iecname="Cfg" type="T_Hoist_Cfg" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Vis" type="T_Hoist_Vis" byteoffset="56" vartype="VAR" />
+      <UserDefElement iecname="Sts" type="T_Hoist_Sts" byteoffset="60" vartype="VAR" />
+      <UserDefElement iecname="Cmd" type="T_Hoist_Cmd" byteoffset="95" vartype="VAR" />
+      <UserDefElement iecname="Hmi" type="T_Hoist_Hmi" byteoffset="97" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Internal_Signal_Main" size="55" nativesize="56" typeclass="Userdef" pouclass="STRUCTURE" iecname="Internal_Signal_Main">
+      <UserDefElement iecname="Sts" type="T_Internal_Signal_Sts" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Cfg" type="T_Internal_Signal_Cfg" byteoffset="22" vartype="VAR" />
+      <UserDefElement iecname="Hmi" type="T_Internal_Signal_Hmi" byteoffset="34" vartype="VAR" />
+      <UserDefElement iecname="Vis" type="T_Internal_Signal_Vis" byteoffset="54" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_PhysicalIO_Sts" size="960" nativesize="962" typeclass="Userdef" pouclass="STRUCTURE" iecname="PhysicalIO_Sts">
+      <UserDefElement iecname="_01_CR711S" type="T_PhysicalIO_Sts_CR711S" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="_05_CR2016_CPL" type="T_PhysicalIO_Sts_CR2016" byteoffset="376" vartype="VAR" />
+      <UserDefElement iecname="_06_CR2016_OC" type="T_PhysicalIO_Sts_CR2016" byteoffset="570" vartype="VAR" />
+      <UserDefElement iecname="_15_CR2050" type="T_PhysicalIO_Sts_CR2050" byteoffset="764" vartype="VAR" />
+      <UserDefElement iecname="_20_CR2012" type="T_PhysicalIO_Sts_CR2012" byteoffset="862" vartype="VAR" />
+      <UserDefElement iecname="Configuration_Read" type="T_BOOL" byteoffset="959" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Propeller_Main" size="112" nativesize="116" typeclass="Userdef" pouclass="STRUCTURE" iecname="Propeller_Main">
+      <UserDefElement iecname="Cfg" type="T_Propeller_Cfg" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Sts" type="T_Propeller_Sts" byteoffset="56" vartype="VAR" />
+      <UserDefElement iecname="Cmd" type="T_Propeller_Cmd" byteoffset="98" vartype="VAR" />
+      <UserDefElement iecname="Hmi" type="T_Propeller_Hmi" byteoffset="110" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Pump_Dredging_Main" size="108" nativesize="112" typeclass="Userdef" pouclass="STRUCTURE" iecname="Pump_Dredging_Main">
+      <UserDefElement iecname="Cfg" type="T_Pump_Dredging_Cfg" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Sts" type="T_Pump_Dredging_Sts" byteoffset="68" vartype="VAR" />
+      <UserDefElement iecname="Hmi" type="T_Pump_Dredging_Hmi" byteoffset="103" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Network_Main" size="77" nativesize="78" typeclass="Userdef" pouclass="STRUCTURE" iecname="Network_Main">
+      <UserDefElement iecname="CAN" type="T_CAN_Main" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="DataCollection" type="T_DataColl_Main" byteoffset="74" vartype="VAR" />
+      <UserDefElement iecname="HMI" type="T_Network_HMI" byteoffset="75" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_PhysicalIO_Main" size="966" nativesize="968" typeclass="Userdef" pouclass="STRUCTURE" iecname="PhysicalIO_Main">
+      <UserDefElement iecname="Sts" type="T_PhysicalIO_Sts" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="Hmi" type="T_PhysicalIO_Hmi" byteoffset="960" vartype="VAR" />
+      <UserDefElement iecname="Cfg" type="T_PhysicalIO_Cfg" byteoffset="962" vartype="VAR" />
+    </TypeUserDef>
+  </TypeList>
+  <NodeList>
+    <Node name="App_User">
+      <Node name="IO">
+        <Node name="Air_Conditioning" type="T_Air_Conditioning_Main" access="ReadWrite" />
+        <Node name="Almec4_0" type="T_Almec4_0_Main" access="ReadWrite" />
+        <Node name="Batteries" type="T_Batteries_Main" access="ReadWrite" />
+        <Node name="Boosters" type="T_Booster_Main" access="ReadWrite" />
+        <Node name="Engine" type="T_Engine_Main" access="ReadWrite" />
+        <Node name="Event" type="T_Event_Main" access="ReadWrite" />
+        <Node name="Excavators" type="T_Excavators_Main" access="ReadWrite" />
+        <Node name="Fuel_Tank" type="T_Fuel_Tank_Main" access="ReadWrite" />
+        <Node name="Hoist" type="T_Hoist_Main" access="ReadWrite" />
+        <Node name="Hull" type="T_Hull_Main" access="ReadWrite" />
+        <Node name="Internal_Signal" type="T_Internal_Signal_Main" access="ReadWrite" />
+        <Node name="Jetring" type="T_Jetring_Main" access="ReadWrite" />
+        <Node name="MachineMode" type="T_MachinMode_Main" access="ReadWrite" />
+        <Node name="Network" type="T_Network_Main" access="ReadWrite" />
+        <Node name="Oil" type="T_Oil_Main" access="ReadWrite" />
+        <Node name="Physical_IO" type="T_PhysicalIO_Main" access="ReadWrite" />
+        <Node name="PowerManagement" type="T_PowerManagement_Main" access="ReadWrite" />
+        <Node name="Propeller" type="T_Propeller_Main" access="ReadWrite" />
+        <Node name="Pump_Dredge" type="T_Pump_Dredging_Main" access="ReadWrite" />
+        <Node name="Pvg_Services" type="T_Pvg_Main" access="ReadWrite" />
+        <Node name="Safety" type="T_Safety_Main" access="ReadWrite" />
+        <Node name="Signal_Lamp" type="T_Signal_Lamp_Main" access="ReadWrite" />
+        <Node name="Slurry" type="T_Slurry_Main" access="ReadWrite" />
+        <Node name="Statistics" type="T_Statistics_Main" access="ReadWrite" />
+        <Node name="System" type="T_System_Main" access="ReadWrite" />
+        <Node name="Winches" type="T_Winches_Main" access="ReadWrite" />
+      </Node>
+    </Node>
+  </NodeList>
+</Symbolconfiguration>

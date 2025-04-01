@@ -1,0 +1,796 @@
+Air_Conditioning_Main:
+  Sts:
+    Pressure_Alarm: T_BOOL
+  Cfg:
+    Present: T_BOOL
+Almec4_0_Main:
+  Cfg:
+    x_modemIndustry40enable: T_BOOL
+  Hmi: {}
+  Sts:
+    Job_Work_Hours_Elapsed: T_UINT
+  Vis: {}
+  Cmd:
+    Job_Num_Requested: T_UINT
+    Job_Work_Hours_Requested: T_UINT
+    Job_Engine_Speed_Requested: T_UINT
+    Job_Oil_Flow_Requested: T_UINT
+Batteries_Main:
+  Sts:
+    rVoltage_From_Batteries: T_REAL
+    iVoltage_From_Batteries: T_INT
+  Cfg: {}
+  Vis:
+    Icon: T_STRING
+Booster_Main:
+  Cfg:
+    Booster_Pump_Present: T_BOOL
+    Booster_Exel_Present: T_BOOL
+  Vis:
+    At_Least_One_Booster_Present: T_BOOL
+    Booster_Pressure_Pump: T_BOOL
+    Booster_Pressure_Excavators: T_BOOL
+CAN_Main:
+  Cfg:
+    _05_CR2016_CommandPlank_Present: T_BOOL
+    _06_CR2016_OC_Present: T_BOOL
+    _15_CR2050_Hydr_Present: T_BOOL
+    _20_CR2012_MC_Present: T_BOOL
+    Hull_Inclinometer_Present: T_BOOL
+    Propeller_Encoder_Present: T_BOOL
+    Propeller_Joystick_Present: T_BOOL
+  Cmd:
+    Not_Sending_ECU2_PDOs_CAN1: T_BOOL
+    Not_Sending_ECU3_PDOs_CAN1: T_BOOL
+    Not_Sending_ECU4_PDOs_CAN1: T_BOOL
+    Not_Sending_ECU5_PDOs_CAN1: T_BOOL
+    Not_Sending_ECU6_PDOs_CAN1: T_BOOL
+    Not_Sending_ECU7_PDOs_CAN1: T_BOOL
+    Not_Sending_ECU8_PDOs_CAN1: T_BOOL
+  Sts:
+    DeviceStatus:
+      _05_CR2016_CP_Connection_Ok: T_BOOL
+      _06_CR2016_OC_Connection_Ok: T_BOOL
+      _15_CR2050_HYD_Connection_Ok: T_BOOL
+      _20_CR2012_Connection_Ok: T_BOOL
+      Joystick_Connection_Ok: T_BOOL
+      Engine_Connection_Ok: T_BOOL
+      HmiToPlc_Connection_Ok: T_BOOL
+      Inclinometer_Connection_Ok: T_BOOL
+      Propeller_Encoder_Connection_Ok: T_BOOL
+    Ch_Status: T_ARRAY__0__3__OF_CAN_Status_Channels
+  Vis:
+    Modem_Industry_4_0_Enabled: T_BOOL
+    Can_Error_Invis: T_BOOL
+DataColl_Main:
+  Cfg:
+    Exor_Present: T_BOOL
+Engine_Main:
+  Cfg:
+    Motor_Brand:
+      Volvo: T_BOOL
+      CAT: T_BOOL
+    x_engineSpeedControlEnable: T_BOOL
+    x_TSC1_CRCenable: T_BOOL
+    StageV: T_BOOL
+    CheckMaintenanceRequired: T_BOOL
+    Engine_Comm_Breakdown_Delay: T_INT
+    Engine_ON_Rpm_Threshold: T_INT
+    Engine_Min_Speed_rpm: T_INT
+    Engine_Max_Speed_rpm: T_INT
+    Engine_Standby_Speed: T_INT
+    Speed_Decrement_rpm: T_INT
+    Speed_Increment_rpm: T_INT
+    Stop_Button_Delay: T_INT
+    Warm_Up_Delay: T_INT
+    Start_Timeout: T_INT
+  Sts:
+    Rpm: T_INT
+    Water_Temp: T_INT
+    Oil_Pressure: T_INT
+    Torque: T_INT
+    Load: T_INT
+    Requested_Speed: T_REAL
+    Fuel_Consumption: T_INT
+    IntakeAirTemp: T_INT
+    Urea_Level: T_INT
+    Urea_Temp: T_INT
+    Running: T_BOOL
+    Ready_To_Run: T_BOOL
+    Intermediate_Speed_Act: T_BOOL
+    Shutting_Down: T_BOOL
+    Warming_Up_Completed: T_BOOL
+    Service_Needed: T_BOOL
+    Derating_Active: T_BOOL
+    Low_Oil_Pressure: T_BOOL
+    Starting: T_BOOL
+    Warning: T_BOOL
+    Alarm: T_BOOL
+    SPN: T_UDINT
+    FMI: T_UINT
+    Maintenance_Required: T_BOOL
+    Regen:
+      Request: T_BOOL
+      Inhibit: T_BOOL
+      Active: T_BOOL
+      Temperature: T_BOOL
+      Error: T_BOOL
+    WaitBeforeCuttingPower: T_BOOL
+    Percentage_Shutting_Down: T_INT
+  Hmi:
+    Add_Rpm: T_BOOL
+    Sub_Rpm: T_BOOL
+    Override: T_BOOL
+  Vis:
+    Icon: T_STRING
+  Cmd:
+    Start: T_BOOL
+    Stop: T_BOOL
+Event_Main:
+  Cfg:
+    i_DigitalSensorWarning_timeFilter: T_INT
+    i_DigitalSensorAlarm_timeFilter: T_INT
+    Minutes_Before_Alarm_Stops_Engine: T_INT
+    Enable_Stop_For_Missing_Comm_RemoteIO: T_BOOL
+  Sts:
+    New_Warning: T_BOOL
+    New_Alarm: T_BOOL
+    Warning_Present: T_BOOL
+    Alarm_Present: T_BOOL
+    Check_Events: T_BOOL
+    Group:
+      Uint_Warning: T_ARRAY__0__3__OF_UINT
+      Byte_Warning: T_ARRAY__0__7__OF_BYTE
+      Uint_Alarm: T_UINT
+      Byte_Alarm: T_ARRAY__0__1__OF_BYTE
+    PopUp:
+      Minutes_Left: T_BYTE
+    Warning: T_ARRAY__0__150__OF_BOOL
+    Alarm: T_ARRAY__0__31__OF_BOOL
+  Out: {}
+  Hmi:
+    Alarm_In_PopUp: T_UINT
+    Acknowledge_PopUp: T_BOOL
+Excavators_Main:
+  Cfg:
+    Present: T_BOOL
+    Direction: T_BOOL
+    Hydraulic_Cmd:
+      PVEA_Max_Value: T_INT
+      PVEA_Min_Value: T_INT
+      PVEA_Neutral_Value: T_INT
+      RampAscendingPercValue: T_INT
+      RampDescendingPercValue: T_INT
+      RampTimeBase: T_INT
+      TimeoutDisableValve_s: T_INT
+      DeadBand: T_INT
+      CFG_PWM:
+        uimA_Max: T_INT
+        uimA_Min: T_INT
+        uiFrequency: T_INT
+        uiDitherFrequency: T_INT
+        uiDitherValue: T_INT
+    Oil_Pressure:
+      Sensor_Present: T_BOOL
+      Min_Raw_Value: T_INT
+      Max_Raw_Value: T_INT
+      Min_Scaled_Value: T_INT
+      Max_Scaled_Value: T_INT
+    Valve_Type:
+      PVEA: T_BOOL
+      PVEHU: T_BOOL
+    Command_Type:
+      Analog: T_BOOL
+      Digital: T_BOOL
+  Sts:
+    Oil_Pressure:
+      Main_Circuit:
+        rValue: T_REAL
+        iValue_x10: T_INT
+        xError_Sensor: T_BOOL
+      Booster:
+        rValue: T_REAL
+        iValue_x10: T_INT
+        xError_Sensor: T_BOOL
+    Oil_Flow:
+      rValue: T_REAL
+      iValue_x10: T_INT
+      xError_Sensor: T_BOOL
+    Running: T_BOOL
+    Stopped: T_BOOL
+    Work_Running: T_BOOL
+    Reverse_Running: T_BOOL
+    Valve_Error: T_BOOL
+    Setpoint_Percentage: T_INT
+    Maintenance_Required: T_BOOL
+  Vis:
+    Text_List: T_INT
+  Hmi:
+    Bypass_Pressure_Sensor_Oil_Circuit: T_BOOL
+Fuel_Tank_Main:
+  Cfg:
+    Level_Sensor_1:
+      Sensor_Present: T_BOOL
+      Min_Raw_Value: T_INT
+      Max_Raw_Value: T_INT
+      Min_Scaled_Value: T_INT
+      Max_Scaled_Value: T_INT
+    Level_Sensor_2:
+      Sensor_Present: T_BOOL
+      Min_Raw_Value: T_INT
+      Max_Raw_Value: T_INT
+      Min_Scaled_Value: T_INT
+      Max_Scaled_Value: T_INT
+    Reserve_Threshold_Perc: T_INT
+    Timer_To_Change_Tank: T_INT
+    Max_Diff_Allowed: T_INT
+    Delay_Both_Tanks_Working: T_INT
+    Percentage_Management: T_BOOL
+    Timer_Management: T_BOOL
+  Sts:
+    Fuel_Level_1:
+      rValue: T_REAL
+      iValue_x10: T_INT
+      xError_Sensor: T_BOOL
+    Fuel_Level_2:
+      rValue: T_REAL
+      iValue_x10: T_INT
+      xError_Sensor: T_BOOL
+    Tank_1_Level_Low: T_BOOL
+    Tank_2_Level_Low: T_BOOL
+    Tank_1_Level_Empty: T_BOOL
+    Tank_2_Level_Empty: T_BOOL
+  Vis:
+    Icon: T_STRING
+    Fuel_Level_Tank1_Reading_Error: T_BOOL
+    Fuel_Level_Tank2_Reading_Error: T_BOOL
+  Hmi:
+    Bypass_Level_Sensor: T_BOOL
+    Auto_Mode: T_BOOL
+    Force_Use_Left_Tank: T_BOOL
+    Force_Use_Right_Tank: T_BOOL
+  Cmd:
+    Left_Tank: T_BOOL
+    Right_Tank: T_BOOL
+Hoist_Main:
+  Cfg:
+    Present: T_BOOL
+    Direction: T_BOOL
+    Hydraulic_Cmd:
+      PVEA_Max_Value: T_INT
+      PVEA_Min_Value: T_INT
+      PVEA_Neutral_Value: T_INT
+      RampAscendingPercValue: T_INT
+      RampDescendingPercValue: T_INT
+      RampTimeBase: T_INT
+      TimeoutDisableValve_s: T_INT
+      DeadBand: T_INT
+      CFG_PWM:
+        uimA_Max: T_INT
+        uimA_Min: T_INT
+        uiFrequency: T_INT
+        uiDitherFrequency: T_INT
+        uiDitherValue: T_INT
+    Oil_Pressure:
+      Sensor_Present: T_BOOL
+      Min_Raw_Value: T_INT
+      Max_Raw_Value: T_INT
+      Min_Scaled_Value: T_INT
+      Max_Scaled_Value: T_INT
+    Encoder_Depth:
+      Sensor_Present: T_BOOL
+      Min_Raw_Value: T_INT
+      Max_Raw_Value: T_INT
+      Min_Scaled_Value: T_INT
+      Max_Scaled_Value: T_INT
+    Max_Cable_Meters_x10: T_INT
+    Value_Interval_For_Average: T_INT
+    Depth_Treshold_Inhibit_Navi: T_INT
+    Limit_Up_Present: T_BOOL
+    Max_Unwind_Present: T_BOOL
+  Vis:
+    Pump_Depth_Scaled: T_INT
+  Sts:
+    Oil_Pressure:
+      Main_Circuit:
+        rValue: T_REAL
+        iValue_x10: T_INT
+        xError_Sensor: T_BOOL
+      Booster:
+        rValue: T_REAL
+        iValue_x10: T_INT
+        xError_Sensor: T_BOOL
+    Pump_Depth:
+      rValue: T_REAL
+      iValue_x10: T_INT
+      xError_Sensor: T_BOOL
+    Pump_Weight:
+      rValue: T_REAL
+      iValue_x10: T_INT
+      xError_Sensor: T_BOOL
+    Valve_Error: T_BOOL
+    Max_Unwind: T_BOOL
+    Up_Limit_Reached: T_BOOL
+    Running: T_BOOL
+  Cmd:
+    Wind: T_BOOL
+    Unwind: T_BOOL
+  Hmi:
+    Encoder_Reset: T_BOOL
+    Bypass_Pressure_Sensor_Oil_Circuit: T_BOOL
+Hull_Main:
+  Cfg: {}
+  Sts:
+    Inclination_X: T_INT
+    Inclination_Y: T_INT
+  Hmi:
+    Inclinometer_Reset: T_BOOL
+Internal_Signal_Main:
+  Sts:
+    Always_On: T_BOOL
+    Always_Off: T_BOOL
+    Enable_Commands_Ok: T_BOOL
+    Ready_To_Receive_Commands: T_BOOL
+    Enable_Correctly_Pressed: T_BOOL
+    Parameter_Editing_Error: T_BOOL
+    All_Parameters_Received: T_BOOL
+    Error_Writing_All_Parameter: T_BOOL
+    Blinkers:
+      _250MS: T_BOOL
+      _500MS: T_BOOL
+      _1000MS: T_BOOL
+      _2000MS: T_BOOL
+    Ons:
+      _250MS: T_BOOL
+      _500MS: T_BOOL
+      _1000MS: T_BOOL
+      _2000MS: T_BOOL
+      _60SEC: T_BOOL
+    MachineStatus: T_INT
+    WorkingMode: T_INT
+  Cfg:
+    ui_OperatorCommandReadyTime: T_UINT
+    Password:
+      Level: T_ARRAY__0__2__OF_INT
+      Delay_Pass_Expire: T_INT
+    EnableButtonForMovementPresent: T_BOOL
+    Inhibit_Switch_Off: T_BOOL
+  Hmi:
+    Active_Page: T_INT
+    Reset_Pb: T_BOOL
+    Ack_Pb: T_BOOL
+    Restore_USB_Pars: T_BOOL
+    Ask_All_Parameters: T_BOOL
+    Ask_All_Events: T_BOOL
+    HMI_Status: T_INT
+    Modify_BOOL_Par: T_BOOL
+    BOOL_Par_to_Modify: T_INT
+    Modify_INT_Par: T_BOOL
+    INT_Par_to_Modify: T_INT
+    Par_New_Value: T_INT
+  Vis:
+    Popup_Opened: T_BOOL
+Jetring_Main:
+  Sts:
+    Running: T_BOOL
+    Hydraulic_Valve_Error: T_BOOL
+  Cfg: {}
+MachinMode_Main:
+  Cfg:
+    Enable_Machine_mode_Popups: T_BOOL
+  Sts:
+    Selector:
+      Work: T_BOOL
+      Navigation: T_BOOL
+    Inhibit_Change_Mode_To_Navi: T_BOOL
+    Inhibit_Change_Mode_To_Work: T_BOOL
+    Inhibit_Navi_Show_Popup: T_BOOL
+    Inhibit_Work_Show_Popup: T_BOOL
+    Press_Enable_Show_Popup: T_BOOL
+    NotPossible_In_Navi_Show_Popup: T_BOOL
+    NotPossible_In_Work_Show_Popup: T_BOOL
+  Vis: {}
+Network_Main:
+  CAN:
+    Cfg:
+      _05_CR2016_CommandPlank_Present: T_BOOL
+      _06_CR2016_OC_Present: T_BOOL
+      _15_CR2050_Hydr_Present: T_BOOL
+      _20_CR2012_MC_Present: T_BOOL
+      Hull_Inclinometer_Present: T_BOOL
+      Propeller_Encoder_Present: T_BOOL
+      Propeller_Joystick_Present: T_BOOL
+    Cmd:
+      Not_Sending_ECU2_PDOs_CAN1: T_BOOL
+      Not_Sending_ECU3_PDOs_CAN1: T_BOOL
+      Not_Sending_ECU4_PDOs_CAN1: T_BOOL
+      Not_Sending_ECU5_PDOs_CAN1: T_BOOL
+      Not_Sending_ECU6_PDOs_CAN1: T_BOOL
+      Not_Sending_ECU7_PDOs_CAN1: T_BOOL
+      Not_Sending_ECU8_PDOs_CAN1: T_BOOL
+    Sts:
+      DeviceStatus:
+        _05_CR2016_CP_Connection_Ok: T_BOOL
+        _06_CR2016_OC_Connection_Ok: T_BOOL
+        _15_CR2050_HYD_Connection_Ok: T_BOOL
+        _20_CR2012_Connection_Ok: T_BOOL
+        Joystick_Connection_Ok: T_BOOL
+        Engine_Connection_Ok: T_BOOL
+        HmiToPlc_Connection_Ok: T_BOOL
+        Inclinometer_Connection_Ok: T_BOOL
+        Propeller_Encoder_Connection_Ok: T_BOOL
+      Ch_Status: T_ARRAY__0__3__OF_CAN_Status_Channels
+    Vis:
+      Modem_Industry_4_0_Enabled: T_BOOL
+      Can_Error_Invis: T_BOOL
+  DataCollection:
+    Cfg:
+      Exor_Present: T_BOOL
+  HMI:
+    Communication_OK: T_BOOL
+    Waiting_For_PLC: T_BOOL
+Oil_Main:
+  Cfg:
+    Level_Digital: T_BOOL
+    Temp_Digital: T_BOOL
+    Filter_1_Present: T_BOOL
+    Filter_2_Present: T_BOOL
+    Filter_3_Present: T_BOOL
+    Filter_4_Present: T_BOOL
+    Filter_5_Present: T_BOOL
+    Filter_6_Present: T_BOOL
+    Filter_7_Present: T_BOOL
+    Filter_8_Present: T_BOOL
+    Filter_9_Present: T_BOOL
+    Filter_10_Present: T_BOOL
+    Temp_Analog:
+      Sensor_Present: T_BOOL
+      Min_Raw_Value: T_INT
+      Max_Raw_Value: T_INT
+      Min_Scaled_Value: T_INT
+      Max_Scaled_Value: T_INT
+    Level_Analog:
+      Sensor_Present: T_BOOL
+      Min_Raw_Value: T_INT
+      Max_Raw_Value: T_INT
+      Min_Scaled_Value: T_INT
+      Max_Scaled_Value: T_INT
+    Limits:
+      Warning_Limit: T_INT
+      Alarm_Limit: T_INT
+      Start_Fans: T_INT
+      Stop_Fans: T_INT
+    Oil_Cooling_Fans_Electric: T_BOOL
+  Sts:
+    Aspiration_Valves_Opened: T_BOOL
+    Oil_Level:
+      rValue: T_REAL
+      iValue_x10: T_INT
+      xError_Sensor: T_BOOL
+    Oil_Lvl_Above_Warning: T_BOOL
+    Oil_Lvl_Above_Alarm: T_BOOL
+    Oil_Lvl_Reading_Error: T_BOOL
+    Oil_Temp:
+      rValue: T_REAL
+      iValue_x10: T_INT
+      xError_Sensor: T_BOOL
+    Oil_Temp_Below_Warning: T_BOOL
+    Oil_Temp_Below_Alarm: T_BOOL
+    Oil_Temp_Reading_Error: T_BOOL
+    Filter_1_Ok: T_BOOL
+    Filter_2_Ok: T_BOOL
+    Filter_3_Ok: T_BOOL
+    Filter_4_Ok: T_BOOL
+    Filter_5_Ok: T_BOOL
+    Filter_6_Ok: T_BOOL
+    Filter_7_Ok: T_BOOL
+    Filter_8_Ok: T_BOOL
+  Cmd:
+    Activate_Fan_Oil_Cooler: T_BOOL
+  Vis:
+    Oil_Temp_Ok_Invis: T_BOOL
+    Oil_Temp_Low_Invis: T_BOOL
+    Oil_Temp_Empty_Invis: T_BOOL
+    Oil_Level_Reading_Error: T_BOOL
+    Oil_Temp_Reading_Error: T_BOOL
+    Oil_Temp_Status_List: T_INT
+    Oil_Level_Status_List: T_INT
+    Icon_Level: T_STRING
+    Icon_Temp: T_STRING
+  Hmi:
+    Bypass_Level: T_BOOL
+    Bypass_Temp: T_BOOL
+PhysicalIO_Main:
+  Sts:
+    _01_CR711S:
+      IN: T_ARRAY__0__31__OF_CR711S_InOut
+      OUT: T_ARRAY__0__29__OF_CR711S_InOut
+      Undervoltage_Output_VBB0: T_BOOL
+      Undervoltage_Output_VBB1: T_BOOL
+      Undervoltage_Output_VBB2: T_BOOL
+      Configuration_Not_Allowed: T_BOOL
+    _05_CR2016_CPL:
+      InOut: T_ARRAY__1__32__OF_CR2016_InOut
+      Read_Done: T_BOOL
+    _06_CR2016_OC:
+      InOut: T_ARRAY__1__32__OF_CR2016_InOut
+      Read_Done: T_BOOL
+    _15_CR2050:
+      InOut: T_ARRAY__0__15__OF_CR2050_InOut
+      Read_Done: T_BOOL
+      Ready: T_BOOL
+    _20_CR2012:
+      InOut: T_ARRAY__1__16__OF_CR2012_InOut
+      Read_Done: T_BOOL
+    Configuration_Read: T_BOOL
+  Hmi:
+    RemoteIO_ID_Request: T_INT
+  Cfg:
+    min4_20_sensorErrorValue: T_INT
+    max4_20_sensorErrorValue: T_INT
+PowerManagement_Main: {}
+Propeller_Main:
+  Cfg:
+    Present: T_BOOL
+    Direction: T_BOOL
+    Hydraulic_Cmd:
+      PVEA_Max_Value: T_INT
+      PVEA_Min_Value: T_INT
+      PVEA_Neutral_Value: T_INT
+      RampAscendingPercValue: T_INT
+      RampDescendingPercValue: T_INT
+      RampTimeBase: T_INT
+      TimeoutDisableValve_s: T_INT
+      DeadBand: T_INT
+      CFG_PWM:
+        uimA_Max: T_INT
+        uimA_Min: T_INT
+        uiFrequency: T_INT
+        uiDitherFrequency: T_INT
+        uiDitherValue: T_INT
+    Oil_Pressure:
+      Sensor_Present: T_BOOL
+      Min_Raw_Value: T_INT
+      Max_Raw_Value: T_INT
+      Min_Scaled_Value: T_INT
+      Max_Scaled_Value: T_INT
+    Joystick:
+      Threshold_UpDown_Cmd: T_INT
+      Threshold_LR_Cmd: T_INT
+      Threshold_FwBw_Cmd: T_INT
+      Axis_Min_Raw_Value: T_INT
+      Axis_Max_Raw_Value: T_INT
+      Thumbwheel_Min_Raw_Value: T_INT
+      Thumbwheel_Max_Raw_Value: T_INT
+    Enable_AutoZero: T_BOOL
+    Zero_Position_Tolerance: T_INT
+  Sts:
+    Oil_Pressure:
+      Main_Circuit:
+        rValue: T_REAL
+        iValue_x10: T_INT
+        xError_Sensor: T_BOOL
+      Booster:
+        rValue: T_REAL
+        iValue_x10: T_INT
+        xError_Sensor: T_BOOL
+    Setpoint_Percentage_Main: T_INT
+    Setpoint_Perc_Ramped_Main: T_INT
+    Hydraulic_Valve_Error: T_BOOL
+    Encoder:
+      rValue: T_REAL
+      iValue_x10: T_INT
+      xError_Sensor: T_BOOL
+    Joystick:
+      Joystick_Axis_X: T_INT
+      Joystick_Axis_Y: T_INT
+      Joystick_Thumbwheel: T_INT
+      Signal_Error_Axis_X: T_BOOL
+      Signal_Error_Axis_Y: T_BOOL
+      Enabled: T_BOOL
+    Running: T_BOOL
+  Cmd:
+    Up: T_BOOL
+    Down: T_BOOL
+    Left: T_BOOL
+    Right: T_BOOL
+    Forward: T_BOOL
+    Backward: T_BOOL
+    Joystick_Human_Presence: T_BOOL
+    Joystick_Power_Fwd: T_SINT
+    Joystick_Power_Bwd: T_SINT
+    Joystick_Left: T_SINT
+    Joystick_Right: T_SINT
+    Joystick_Thumbwheel: T_SINT
+  Hmi:
+    Encoder_Reset: T_BOOL
+    Bypass_Pressure_Sensor_Oil_Circuit: T_BOOL
+Pump_Dredging_Main:
+  Cfg:
+    Command_Type:
+      Analog: T_BOOL
+      Digital: T_BOOL
+    Oil_Flow:
+      Sensor_Present: T_BOOL
+      Min_Raw_Value: T_INT
+      Max_Raw_Value: T_INT
+      Min_Scaled_Value: T_INT
+      Max_Scaled_Value: T_INT
+    Oil_Pressure_Main:
+      Sensor_Present: T_BOOL
+      Min_Raw_Value: T_INT
+      Max_Raw_Value: T_INT
+      Min_Scaled_Value: T_INT
+      Max_Scaled_Value: T_INT
+    Oil_Pressure_Second:
+      Sensor_Present: T_BOOL
+      Min_Raw_Value: T_INT
+      Max_Raw_Value: T_INT
+      Min_Scaled_Value: T_INT
+      Max_Scaled_Value: T_INT
+    Hydraulic_Cmd:
+      StartingValuePerc: T_INT
+      RampAscendingPercValue: T_INT
+      RampDescendingPercValue: T_INT
+      RampTimeBase: T_INT
+      DelayShutOff: T_INT
+      Secondary_Circuit_Always_Enabled: T_BOOL
+      CFG_PWM_Main:
+        uimA_Max: T_INT
+        uimA_Min: T_INT
+        uiFrequency: T_INT
+        uiDitherFrequency: T_INT
+        uiDitherValue: T_INT
+      CFG_PWM_Second:
+        uimA_Max: T_INT
+        uimA_Min: T_INT
+        uiFrequency: T_INT
+        uiDitherFrequency: T_INT
+        uiDitherValue: T_INT
+    DuplomaticValvePresent: T_BOOL
+  Sts:
+    Oil_Pressure:
+      Main_Circuit:
+        rValue: T_REAL
+        iValue_x10: T_INT
+        xError_Sensor: T_BOOL
+      Secondary_Circuit:
+        rValue: T_REAL
+        iValue_x10: T_INT
+        xError_Sensor: T_BOOL
+    Oil_Flow:
+      rValue: T_REAL
+      iValue_x10: T_INT
+      xError_Sensor: T_BOOL
+    Setpoint_Percentage_Main: T_INT
+    Setpoint_Percentage_Sec: T_INT
+    Setpoint_Perc_Ramped_Main: T_INT
+    Setpoint_Perc_Ramped_Sec: T_INT
+    Running: T_BOOL
+    Maintenance_Required: T_BOOL
+    Hydraulic_Cmd_Err: T_BOOL
+  Hmi:
+    Add_Rpm: T_BOOL
+    Sub_Rpm: T_BOOL
+    Bypass_Pressure_Sensor_Oil_Main_Circuit: T_BOOL
+    Bypass_Pressure_Sensor_Oil_Sec_Circuit: T_BOOL
+    Bypass_Flowmeter_Oil_Circuit: T_BOOL
+Pvg_Main:
+  Sts:
+    Oil_Pressure:
+      rValue: T_REAL
+      iValue_x10: T_INT
+      xError_Sensor: T_BOOL
+  Cfg:
+    Oil_Pressure:
+      Sensor_Present: T_BOOL
+      Min_Raw_Value: T_INT
+      Max_Raw_Value: T_INT
+      Min_Scaled_Value: T_INT
+      Max_Scaled_Value: T_INT
+  Hmi:
+    Bypass_Pressure_Sensor_Oil_Circuit: T_BOOL
+Safety_Main:
+  Cmd:
+    Global_Reset: T_BOOL
+  Sts:
+    Safety_Not_Ok: T_BOOL
+    Safety_Ok: T_BOOL
+Signal_Lamp_Main:
+  Cfg:
+    i_batteryBreakerTime: T_INT
+  Out: {}
+  Sts: {}
+Slurry_Main:
+  Sts:
+    Flow:
+      rValue: T_REAL
+      iValue_x10: T_INT
+      xError_Sensor: T_BOOL
+    Density:
+      rValue: T_REAL
+      iValue_x10: T_INT
+      xError_Sensor: T_BOOL
+    Production: T_INT
+  Vis:
+    Density_Sensor_Enabled: T_BOOL
+    Flow_Sensor_Enabled: T_BOOL
+  Cfg:
+    Flow_Sensor:
+      Sensor_Present: T_BOOL
+      Min_Raw_Value: T_INT
+      Max_Raw_Value: T_INT
+      Min_Scaled_Value: T_INT
+      Max_Scaled_Value: T_INT
+    Density_Sensor:
+      Sensor_Present: T_BOOL
+      Min_Raw_Value: T_INT
+      Max_Raw_Value: T_INT
+      Min_Scaled_Value: T_INT
+      Max_Scaled_Value: T_INT
+Statistics_Main:
+  Cfg: {}
+  Sts:
+    Dredging_Pump_Working_Hours: T_DINT
+    Excavators_Working_Hours: T_DINT
+    Engine_Running_Hours: T_DINT
+    Dredging_Pump_Service_Hours: T_INT
+    Excavators_Service_Hours: T_INT
+    Engine_Service_Hours: T_INT
+  Hmi:
+    Reset_Pump_Total_Hours: T_BOOL
+    Reset_Excav_Total_Hours: T_BOOL
+    Reset_Pump_Service_Hours: T_BOOL
+    Reset_Excav_Service_Hours: T_BOOL
+    Reset_Engine_Total_Hours: T_BOOL
+    Reset_Engine_Service_Hours: T_BOOL
+System_Main:
+  Cfg:
+    Mach_Details:
+      Serial_ID: T_DINT
+      Customer_Name: T_STRING
+      Model: T_STRING
+      PLC_Software_Revision: T_STRING
+    Power_Manage:
+      Timeout_Shutdown_Off_Sec: T_INT
+  Vis:
+    VarSimulation: T_BOOL
+    Year: T_UINT
+    Month: T_UINT
+    Day: T_UINT
+    Hour: T_UINT
+    Minute: T_UINT
+    Second: T_UINT
+    sDateTime: T_STRING
+  Sts:
+    Battery_Voltage: T_INT
+    ActivePasswordLevel: T_UINT
+    PLC_ShuttingDown: T_BOOL
+    Restoring_Factory: T_BOOL
+    Creating_Backup: T_BOOL
+    Restoring_Backup: T_BOOL
+    INT_From_HMI: T_INT
+    INT_From_PLC: T_INT
+  Hmi:
+    Restore_Factory: T_BOOL
+    HMI_ShuttingDown: T_BOOL
+    BackupParameterInProgress: T_BOOL
+    RestoreParameterInProgress: T_BOOL
+  Cmd:
+    Switch_Off_HMI: T_BOOL
+Winches_Main:
+  Cfg:
+    FL_Reverse_Direction: T_BOOL
+    FR_Reverse_Direction: T_BOOL
+    RL_Reverse_Direction: T_BOOL
+    RR_Reverse_Direction: T_BOOL
+  Sts: {}
+  Cmd:
+    FL_Wind: T_BOOL
+    FL_Unwind: T_BOOL
+    RL_Wind: T_BOOL
+    RL_Unwind: T_BOOL
+    FR_Wind: T_BOOL
+    FR_Unwind: T_BOOL
+    RR_Wind: T_BOOL
+    RR_Unwind: T_BOOL

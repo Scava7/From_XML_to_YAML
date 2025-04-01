@@ -1,0 +1,762 @@
+IO:
+  Air_Conditioning:
+    Sts:
+      Pressure_Alarm: BOOL
+    Cfg:
+      Present: BOOL
+  Almec4_0:
+    Cfg:
+      x_modemIndustry40enable: BOOL
+    Hmi: {}
+    Sts:
+      Job_Work_Hours_Elapsed: UINT
+    Vis: {}
+    Cmd:
+      Job_Num_Requested: UINT
+      Job_Work_Hours_Requested: UINT
+      Job_Engine_Speed_Requested: UINT
+      Job_Oil_Flow_Requested: UINT
+  Batteries:
+    Sts:
+      rVoltage_From_Batteries: REAL
+      iVoltage_From_Batteries: INT
+    Cfg: {}
+    Vis:
+      Icon: STRING
+  Boosters:
+    Cfg:
+      Booster_Pump_Present: BOOL
+      Booster_Exel_Present: BOOL
+    Vis:
+      At_Least_One_Booster_Present: BOOL
+      Booster_Pressure_Pump: BOOL
+      Booster_Pressure_Excavators: BOOL
+  Engine:
+    Cfg:
+      Motor_Brand:
+        Volvo: BOOL
+        CAT: BOOL
+      x_engineSpeedControlEnable: BOOL
+      x_TSC1_CRCenable: BOOL
+      StageV: BOOL
+      CheckMaintenanceRequired: BOOL
+      Engine_Comm_Breakdown_Delay: INT
+      Engine_ON_Rpm_Threshold: INT
+      Engine_Min_Speed_rpm: INT
+      Engine_Max_Speed_rpm: INT
+      Engine_Standby_Speed: INT
+      Speed_Decrement_rpm: INT
+      Speed_Increment_rpm: INT
+      Stop_Button_Delay: INT
+      Warm_Up_Delay: INT
+      Start_Timeout: INT
+    Sts:
+      Rpm: INT
+      Water_Temp: INT
+      Oil_Pressure: INT
+      Torque: INT
+      Load: INT
+      Requested_Speed: REAL
+      Fuel_Consumption: INT
+      IntakeAirTemp: INT
+      Urea_Level: INT
+      Urea_Temp: INT
+      Running: BOOL
+      Ready_To_Run: BOOL
+      Intermediate_Speed_Act: BOOL
+      Shutting_Down: BOOL
+      Warming_Up_Completed: BOOL
+      Service_Needed: BOOL
+      Derating_Active: BOOL
+      Low_Oil_Pressure: BOOL
+      Starting: BOOL
+      Warning: BOOL
+      Alarm: BOOL
+      SPN: UDINT
+      FMI: UINT
+      Maintenance_Required: BOOL
+      Regen:
+        Request: BOOL
+        Inhibit: BOOL
+        Active: BOOL
+        Temperature: BOOL
+        Error: BOOL
+      WaitBeforeCuttingPower: BOOL
+      Percentage_Shutting_Down: INT
+    Hmi:
+      Add_Rpm: BOOL
+      Sub_Rpm: BOOL
+      Override: BOOL
+    Vis:
+      Icon: STRING
+    Cmd:
+      Start: BOOL
+      Stop: BOOL
+  Event:
+    Cfg:
+      i_DigitalSensorWarning_timeFilter: INT
+      i_DigitalSensorAlarm_timeFilter: INT
+      Minutes_Before_Alarm_Stops_Engine: INT
+      Enable_Stop_For_Missing_Comm_RemoteIO: BOOL
+    Sts:
+      New_Warning: BOOL
+      New_Alarm: BOOL
+      Warning_Present: BOOL
+      Alarm_Present: BOOL
+      Check_Events: BOOL
+      Group:
+        Uint_Warning: ARRAY__0__3__OF_UINT
+        Byte_Warning: ARRAY__0__7__OF_BYTE
+        Uint_Alarm: UINT
+        Byte_Alarm: ARRAY__0__1__OF_BYTE
+      PopUp:
+        Minutes_Left: BYTE
+      Warning: ARRAY__0__150__OF_BOOL
+      Alarm: ARRAY__0__31__OF_BOOL
+    Out: {}
+    Hmi:
+      Alarm_In_PopUp: UINT
+      Acknowledge_PopUp: BOOL
+  Excavators:
+    Cfg:
+      Present: BOOL
+      Direction: BOOL
+      Hydraulic_Cmd:
+        PVEA_Max_Value: INT
+        PVEA_Min_Value: INT
+        PVEA_Neutral_Value: INT
+        RampAscendingPercValue: INT
+        RampDescendingPercValue: INT
+        RampTimeBase: INT
+        TimeoutDisableValve_s: INT
+        DeadBand: INT
+        CFG_PWM:
+          uimA_Max: INT
+          uimA_Min: INT
+          uiFrequency: INT
+          uiDitherFrequency: INT
+          uiDitherValue: INT
+      Oil_Pressure:
+        Sensor_Present: BOOL
+        Min_Raw_Value: INT
+        Max_Raw_Value: INT
+        Min_Scaled_Value: INT
+        Max_Scaled_Value: INT
+      Valve_Type:
+        PVEA: BOOL
+        PVEHU: BOOL
+      Command_Type:
+        Analog: BOOL
+        Digital: BOOL
+    Sts:
+      Oil_Pressure:
+        Main_Circuit:
+          rValue: REAL
+          iValue_x10: INT
+          xError_Sensor: BOOL
+        Booster:
+          rValue: REAL
+          iValue_x10: INT
+          xError_Sensor: BOOL
+      Oil_Flow:
+        rValue: REAL
+        iValue_x10: INT
+        xError_Sensor: BOOL
+      Running: BOOL
+      Stopped: BOOL
+      Work_Running: BOOL
+      Reverse_Running: BOOL
+      Valve_Error: BOOL
+      Setpoint_Percentage: INT
+      Maintenance_Required: BOOL
+    Vis:
+      Text_List: INT
+    Hmi:
+      Bypass_Pressure_Sensor_Oil_Circuit: BOOL
+  Fuel_Tank:
+    Cfg:
+      Level_Sensor_1:
+        Sensor_Present: BOOL
+        Min_Raw_Value: INT
+        Max_Raw_Value: INT
+        Min_Scaled_Value: INT
+        Max_Scaled_Value: INT
+      Level_Sensor_2:
+        Sensor_Present: BOOL
+        Min_Raw_Value: INT
+        Max_Raw_Value: INT
+        Min_Scaled_Value: INT
+        Max_Scaled_Value: INT
+      Reserve_Threshold_Perc: INT
+      Timer_To_Change_Tank: INT
+      Max_Diff_Allowed: INT
+      Delay_Both_Tanks_Working: INT
+      Percentage_Management: BOOL
+      Timer_Management: BOOL
+    Sts:
+      Fuel_Level_1:
+        rValue: REAL
+        iValue_x10: INT
+        xError_Sensor: BOOL
+      Fuel_Level_2:
+        rValue: REAL
+        iValue_x10: INT
+        xError_Sensor: BOOL
+      Tank_1_Level_Low: BOOL
+      Tank_2_Level_Low: BOOL
+      Tank_1_Level_Empty: BOOL
+      Tank_2_Level_Empty: BOOL
+    Vis:
+      Icon: STRING
+      Fuel_Level_Tank1_Reading_Error: BOOL
+      Fuel_Level_Tank2_Reading_Error: BOOL
+    Hmi:
+      Bypass_Level_Sensor: BOOL
+      Auto_Mode: BOOL
+      Force_Use_Left_Tank: BOOL
+      Force_Use_Right_Tank: BOOL
+    Cmd:
+      Left_Tank: BOOL
+      Right_Tank: BOOL
+  Hoist:
+    Cfg:
+      Present: BOOL
+      Direction: BOOL
+      Hydraulic_Cmd:
+        PVEA_Max_Value: INT
+        PVEA_Min_Value: INT
+        PVEA_Neutral_Value: INT
+        RampAscendingPercValue: INT
+        RampDescendingPercValue: INT
+        RampTimeBase: INT
+        TimeoutDisableValve_s: INT
+        DeadBand: INT
+        CFG_PWM:
+          uimA_Max: INT
+          uimA_Min: INT
+          uiFrequency: INT
+          uiDitherFrequency: INT
+          uiDitherValue: INT
+      Oil_Pressure:
+        Sensor_Present: BOOL
+        Min_Raw_Value: INT
+        Max_Raw_Value: INT
+        Min_Scaled_Value: INT
+        Max_Scaled_Value: INT
+      Encoder_Depth:
+        Sensor_Present: BOOL
+        Min_Raw_Value: INT
+        Max_Raw_Value: INT
+        Min_Scaled_Value: INT
+        Max_Scaled_Value: INT
+      Max_Cable_Meters_x10: INT
+      Value_Interval_For_Average: INT
+      Depth_Treshold_Inhibit_Navi: INT
+      Limit_Up_Present: BOOL
+      Max_Unwind_Present: BOOL
+    Vis:
+      Pump_Depth_Scaled: INT
+    Sts:
+      Oil_Pressure:
+        Main_Circuit:
+          rValue: REAL
+          iValue_x10: INT
+          xError_Sensor: BOOL
+        Booster:
+          rValue: REAL
+          iValue_x10: INT
+          xError_Sensor: BOOL
+      Pump_Depth:
+        rValue: REAL
+        iValue_x10: INT
+        xError_Sensor: BOOL
+      Pump_Weight:
+        rValue: REAL
+        iValue_x10: INT
+        xError_Sensor: BOOL
+      Valve_Error: BOOL
+      Max_Unwind: BOOL
+      Up_Limit_Reached: BOOL
+      Running: BOOL
+    Cmd:
+      Wind: BOOL
+      Unwind: BOOL
+    Hmi:
+      Encoder_Reset: BOOL
+      Bypass_Pressure_Sensor_Oil_Circuit: BOOL
+  Hull:
+    Cfg: {}
+    Sts:
+      Inclination_X: INT
+      Inclination_Y: INT
+    Hmi:
+      Inclinometer_Reset: BOOL
+  Internal_Signal:
+    Sts:
+      Always_On: BOOL
+      Always_Off: BOOL
+      Enable_Commands_Ok: BOOL
+      Ready_To_Receive_Commands: BOOL
+      Enable_Correctly_Pressed: BOOL
+      Parameter_Editing_Error: BOOL
+      All_Parameters_Received: BOOL
+      Error_Writing_All_Parameter: BOOL
+      Blinkers:
+        _250MS: BOOL
+        _500MS: BOOL
+        _1000MS: BOOL
+        _2000MS: BOOL
+      Ons:
+        _250MS: BOOL
+        _500MS: BOOL
+        _1000MS: BOOL
+        _2000MS: BOOL
+        _60SEC: BOOL
+      MachineStatus: INT
+      WorkingMode: INT
+    Cfg:
+      ui_OperatorCommandReadyTime: UINT
+      Password:
+        Level: ARRAY__0__2__OF_INT
+        Delay_Pass_Expire: INT
+      EnableButtonForMovementPresent: BOOL
+      Inhibit_Switch_Off: BOOL
+    Hmi:
+      Active_Page: INT
+      Reset_Pb: BOOL
+      Ack_Pb: BOOL
+      Restore_USB_Pars: BOOL
+      Ask_All_Parameters: BOOL
+      Ask_All_Events: BOOL
+      HMI_Status: INT
+      Modify_BOOL_Par: BOOL
+      BOOL_Par_to_Modify: INT
+      Modify_INT_Par: BOOL
+      INT_Par_to_Modify: INT
+      Par_New_Value: INT
+    Vis:
+      Popup_Opened: BOOL
+  Jetring:
+    Sts:
+      Running: BOOL
+      Hydraulic_Valve_Error: BOOL
+    Cfg: {}
+  MachineMode:
+    Cfg:
+      Enable_Machine_mode_Popups: BOOL
+    Sts:
+      Selector:
+        Work: BOOL
+        Navigation: BOOL
+      Inhibit_Change_Mode_To_Navi: BOOL
+      Inhibit_Change_Mode_To_Work: BOOL
+      Inhibit_Navi_Show_Popup: BOOL
+      Inhibit_Work_Show_Popup: BOOL
+      Press_Enable_Show_Popup: BOOL
+      NotPossible_In_Navi_Show_Popup: BOOL
+      NotPossible_In_Work_Show_Popup: BOOL
+    Vis: {}
+  Network:
+    CAN:
+      Cfg:
+        _05_CR2016_CommandPlank_Present: BOOL
+        _06_CR2016_OC_Present: BOOL
+        _15_CR2050_Hydr_Present: BOOL
+        _20_CR2012_MC_Present: BOOL
+        Hull_Inclinometer_Present: BOOL
+        Propeller_Encoder_Present: BOOL
+        Propeller_Joystick_Present: BOOL
+      Cmd:
+        Not_Sending_ECU2_PDOs_CAN1: BOOL
+        Not_Sending_ECU3_PDOs_CAN1: BOOL
+        Not_Sending_ECU4_PDOs_CAN1: BOOL
+        Not_Sending_ECU5_PDOs_CAN1: BOOL
+        Not_Sending_ECU6_PDOs_CAN1: BOOL
+        Not_Sending_ECU7_PDOs_CAN1: BOOL
+        Not_Sending_ECU8_PDOs_CAN1: BOOL
+      Sts:
+        DeviceStatus:
+          _05_CR2016_CP_Connection_Ok: BOOL
+          _06_CR2016_OC_Connection_Ok: BOOL
+          _15_CR2050_HYD_Connection_Ok: BOOL
+          _20_CR2012_Connection_Ok: BOOL
+          Joystick_Connection_Ok: BOOL
+          Engine_Connection_Ok: BOOL
+          HmiToPlc_Connection_Ok: BOOL
+          Inclinometer_Connection_Ok: BOOL
+          Propeller_Encoder_Connection_Ok: BOOL
+        Ch_Status: ARRAY__0__3__OF_CAN_Status_Channels
+      Vis:
+        Modem_Industry_4_0_Enabled: BOOL
+        Can_Error_Invis: BOOL
+    DataCollection:
+      Cfg:
+        Exor_Present: BOOL
+    HMI:
+      Communication_OK: BOOL
+      Waiting_For_PLC: BOOL
+  Oil:
+    Cfg:
+      Level_Digital: BOOL
+      Temp_Digital: BOOL
+      Filter_1_Present: BOOL
+      Filter_2_Present: BOOL
+      Filter_3_Present: BOOL
+      Filter_4_Present: BOOL
+      Filter_5_Present: BOOL
+      Filter_6_Present: BOOL
+      Filter_7_Present: BOOL
+      Filter_8_Present: BOOL
+      Filter_9_Present: BOOL
+      Filter_10_Present: BOOL
+      Temp_Analog:
+        Sensor_Present: BOOL
+        Min_Raw_Value: INT
+        Max_Raw_Value: INT
+        Min_Scaled_Value: INT
+        Max_Scaled_Value: INT
+      Level_Analog:
+        Sensor_Present: BOOL
+        Min_Raw_Value: INT
+        Max_Raw_Value: INT
+        Min_Scaled_Value: INT
+        Max_Scaled_Value: INT
+      Limits:
+        Warning_Limit: INT
+        Alarm_Limit: INT
+        Start_Fans: INT
+        Stop_Fans: INT
+      Oil_Cooling_Fans_Electric: BOOL
+    Sts:
+      Aspiration_Valves_Opened: BOOL
+      Oil_Level:
+        rValue: REAL
+        iValue_x10: INT
+        xError_Sensor: BOOL
+      Oil_Lvl_Above_Warning: BOOL
+      Oil_Lvl_Above_Alarm: BOOL
+      Oil_Lvl_Reading_Error: BOOL
+      Oil_Temp:
+        rValue: REAL
+        iValue_x10: INT
+        xError_Sensor: BOOL
+      Oil_Temp_Below_Warning: BOOL
+      Oil_Temp_Below_Alarm: BOOL
+      Oil_Temp_Reading_Error: BOOL
+      Filter_1_Ok: BOOL
+      Filter_2_Ok: BOOL
+      Filter_3_Ok: BOOL
+      Filter_4_Ok: BOOL
+      Filter_5_Ok: BOOL
+      Filter_6_Ok: BOOL
+      Filter_7_Ok: BOOL
+      Filter_8_Ok: BOOL
+    Cmd:
+      Activate_Fan_Oil_Cooler: BOOL
+    Vis:
+      Oil_Temp_Ok_Invis: BOOL
+      Oil_Temp_Low_Invis: BOOL
+      Oil_Temp_Empty_Invis: BOOL
+      Oil_Level_Reading_Error: BOOL
+      Oil_Temp_Reading_Error: BOOL
+      Oil_Temp_Status_List: INT
+      Oil_Level_Status_List: INT
+      Icon_Level: STRING
+      Icon_Temp: STRING
+    Hmi:
+      Bypass_Level: BOOL
+      Bypass_Temp: BOOL
+  Physical_IO:
+    Sts:
+      _01_CR711S:
+        IN: ARRAY__0__31__OF_CR711S_InOut
+        OUT: ARRAY__0__29__OF_CR711S_InOut
+        Undervoltage_Output_VBB0: BOOL
+        Undervoltage_Output_VBB1: BOOL
+        Undervoltage_Output_VBB2: BOOL
+        Configuration_Not_Allowed: BOOL
+      _05_CR2016_CPL:
+        InOut: ARRAY__1__32__OF_CR2016_InOut
+        Read_Done: BOOL
+      _06_CR2016_OC:
+        InOut: ARRAY__1__32__OF_CR2016_InOut
+        Read_Done: BOOL
+      _15_CR2050:
+        InOut: ARRAY__0__15__OF_CR2050_InOut
+        Read_Done: BOOL
+        Ready: BOOL
+      _20_CR2012:
+        InOut: ARRAY__1__16__OF_CR2012_InOut
+        Read_Done: BOOL
+      Configuration_Read: BOOL
+    Hmi:
+      RemoteIO_ID_Request: INT
+    Cfg:
+      min4_20_sensorErrorValue: INT
+      max4_20_sensorErrorValue: INT
+  PowerManagement: {}
+  Propeller:
+    Cfg:
+      Present: BOOL
+      Direction: BOOL
+      Hydraulic_Cmd:
+        PVEA_Max_Value: INT
+        PVEA_Min_Value: INT
+        PVEA_Neutral_Value: INT
+        RampAscendingPercValue: INT
+        RampDescendingPercValue: INT
+        RampTimeBase: INT
+        TimeoutDisableValve_s: INT
+        DeadBand: INT
+        CFG_PWM:
+          uimA_Max: INT
+          uimA_Min: INT
+          uiFrequency: INT
+          uiDitherFrequency: INT
+          uiDitherValue: INT
+      Oil_Pressure:
+        Sensor_Present: BOOL
+        Min_Raw_Value: INT
+        Max_Raw_Value: INT
+        Min_Scaled_Value: INT
+        Max_Scaled_Value: INT
+      Joystick:
+        Threshold_UpDown_Cmd: INT
+        Threshold_LR_Cmd: INT
+        Threshold_FwBw_Cmd: INT
+        Axis_Min_Raw_Value: INT
+        Axis_Max_Raw_Value: INT
+        Thumbwheel_Min_Raw_Value: INT
+        Thumbwheel_Max_Raw_Value: INT
+      Enable_AutoZero: BOOL
+      Zero_Position_Tolerance: INT
+    Sts:
+      Oil_Pressure:
+        Main_Circuit:
+          rValue: REAL
+          iValue_x10: INT
+          xError_Sensor: BOOL
+        Booster:
+          rValue: REAL
+          iValue_x10: INT
+          xError_Sensor: BOOL
+      Setpoint_Percentage_Main: INT
+      Setpoint_Perc_Ramped_Main: INT
+      Hydraulic_Valve_Error: BOOL
+      Encoder:
+        rValue: REAL
+        iValue_x10: INT
+        xError_Sensor: BOOL
+      Joystick:
+        Joystick_Axis_X: INT
+        Joystick_Axis_Y: INT
+        Joystick_Thumbwheel: INT
+        Signal_Error_Axis_X: BOOL
+        Signal_Error_Axis_Y: BOOL
+        Enabled: BOOL
+      Running: BOOL
+    Cmd:
+      Up: BOOL
+      Down: BOOL
+      Left: BOOL
+      Right: BOOL
+      Forward: BOOL
+      Backward: BOOL
+      Joystick_Human_Presence: BOOL
+      Joystick_Power_Fwd: SINT
+      Joystick_Power_Bwd: SINT
+      Joystick_Left: SINT
+      Joystick_Right: SINT
+      Joystick_Thumbwheel: SINT
+    Hmi:
+      Encoder_Reset: BOOL
+      Bypass_Pressure_Sensor_Oil_Circuit: BOOL
+  Pump_Dredge:
+    Cfg:
+      Command_Type:
+        Analog: BOOL
+        Digital: BOOL
+      Oil_Flow:
+        Sensor_Present: BOOL
+        Min_Raw_Value: INT
+        Max_Raw_Value: INT
+        Min_Scaled_Value: INT
+        Max_Scaled_Value: INT
+      Oil_Pressure_Main:
+        Sensor_Present: BOOL
+        Min_Raw_Value: INT
+        Max_Raw_Value: INT
+        Min_Scaled_Value: INT
+        Max_Scaled_Value: INT
+      Oil_Pressure_Second:
+        Sensor_Present: BOOL
+        Min_Raw_Value: INT
+        Max_Raw_Value: INT
+        Min_Scaled_Value: INT
+        Max_Scaled_Value: INT
+      Hydraulic_Cmd:
+        StartingValuePerc: INT
+        RampAscendingPercValue: INT
+        RampDescendingPercValue: INT
+        RampTimeBase: INT
+        DelayShutOff: INT
+        Secondary_Circuit_Always_Enabled: BOOL
+        CFG_PWM_Main:
+          uimA_Max: INT
+          uimA_Min: INT
+          uiFrequency: INT
+          uiDitherFrequency: INT
+          uiDitherValue: INT
+        CFG_PWM_Second:
+          uimA_Max: INT
+          uimA_Min: INT
+          uiFrequency: INT
+          uiDitherFrequency: INT
+          uiDitherValue: INT
+      DuplomaticValvePresent: BOOL
+    Sts:
+      Oil_Pressure:
+        Main_Circuit:
+          rValue: REAL
+          iValue_x10: INT
+          xError_Sensor: BOOL
+        Secondary_Circuit:
+          rValue: REAL
+          iValue_x10: INT
+          xError_Sensor: BOOL
+      Oil_Flow:
+        rValue: REAL
+        iValue_x10: INT
+        xError_Sensor: BOOL
+      Setpoint_Percentage_Main: INT
+      Setpoint_Percentage_Sec: INT
+      Setpoint_Perc_Ramped_Main: INT
+      Setpoint_Perc_Ramped_Sec: INT
+      Running: BOOL
+      Maintenance_Required: BOOL
+      Hydraulic_Cmd_Err: BOOL
+    Hmi:
+      Add_Rpm: BOOL
+      Sub_Rpm: BOOL
+      Bypass_Pressure_Sensor_Oil_Main_Circuit: BOOL
+      Bypass_Pressure_Sensor_Oil_Sec_Circuit: BOOL
+      Bypass_Flowmeter_Oil_Circuit: BOOL
+  Pvg_Services:
+    Sts:
+      Oil_Pressure:
+        rValue: REAL
+        iValue_x10: INT
+        xError_Sensor: BOOL
+    Cfg:
+      Oil_Pressure:
+        Sensor_Present: BOOL
+        Min_Raw_Value: INT
+        Max_Raw_Value: INT
+        Min_Scaled_Value: INT
+        Max_Scaled_Value: INT
+    Hmi:
+      Bypass_Pressure_Sensor_Oil_Circuit: BOOL
+  Safety:
+    Cmd:
+      Global_Reset: BOOL
+    Sts:
+      Safety_Not_Ok: BOOL
+      Safety_Ok: BOOL
+  Signal_Lamp:
+    Cfg:
+      i_batteryBreakerTime: INT
+    Out: {}
+    Sts: {}
+  Slurry:
+    Sts:
+      Flow:
+        rValue: REAL
+        iValue_x10: INT
+        xError_Sensor: BOOL
+      Density:
+        rValue: REAL
+        iValue_x10: INT
+        xError_Sensor: BOOL
+      Production: INT
+    Vis:
+      Density_Sensor_Enabled: BOOL
+      Flow_Sensor_Enabled: BOOL
+    Cfg:
+      Flow_Sensor:
+        Sensor_Present: BOOL
+        Min_Raw_Value: INT
+        Max_Raw_Value: INT
+        Min_Scaled_Value: INT
+        Max_Scaled_Value: INT
+      Density_Sensor:
+        Sensor_Present: BOOL
+        Min_Raw_Value: INT
+        Max_Raw_Value: INT
+        Min_Scaled_Value: INT
+        Max_Scaled_Value: INT
+  Statistics:
+    Cfg: {}
+    Sts:
+      Dredging_Pump_Working_Hours: DINT
+      Excavators_Working_Hours: DINT
+      Engine_Running_Hours: DINT
+      Dredging_Pump_Service_Hours: INT
+      Excavators_Service_Hours: INT
+      Engine_Service_Hours: INT
+    Hmi:
+      Reset_Pump_Total_Hours: BOOL
+      Reset_Excav_Total_Hours: BOOL
+      Reset_Pump_Service_Hours: BOOL
+      Reset_Excav_Service_Hours: BOOL
+      Reset_Engine_Total_Hours: BOOL
+      Reset_Engine_Service_Hours: BOOL
+  System:
+    Cfg:
+      Mach_Details:
+        Serial_ID: DINT
+        Customer_Name: STRING
+        Model: STRING
+        PLC_Software_Revision: STRING
+      Power_Manage:
+        Timeout_Shutdown_Off_Sec: INT
+    Vis:
+      VarSimulation: BOOL
+      Year: UINT
+      Month: UINT
+      Day: UINT
+      Hour: UINT
+      Minute: UINT
+      Second: UINT
+      sDateTime: STRING
+    Sts:
+      Battery_Voltage: INT
+      ActivePasswordLevel: UINT
+      PLC_ShuttingDown: BOOL
+      Restoring_Factory: BOOL
+      Creating_Backup: BOOL
+      Restoring_Backup: BOOL
+      INT_From_HMI: INT
+      INT_From_PLC: INT
+    Hmi:
+      Restore_Factory: BOOL
+      HMI_ShuttingDown: BOOL
+      BackupParameterInProgress: BOOL
+      RestoreParameterInProgress: BOOL
+    Cmd:
+      Switch_Off_HMI: BOOL
+  Winches:
+    Cfg:
+      FL_Reverse_Direction: BOOL
+      FR_Reverse_Direction: BOOL
+      RL_Reverse_Direction: BOOL
+      RR_Reverse_Direction: BOOL
+    Sts: {}
+    Cmd:
+      FL_Wind: BOOL
+      FL_Unwind: BOOL
+      RL_Wind: BOOL
+      RL_Unwind: BOOL
+      FR_Wind: BOOL
+      FR_Unwind: BOOL
+      RR_Wind: BOOL
+      RR_Unwind: BOOL
